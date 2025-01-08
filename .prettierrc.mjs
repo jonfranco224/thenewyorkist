@@ -13,6 +13,7 @@ export default {
         printWidth: 70,
         tabWidth: 2,
         useTabs: false,
+        astroAllowShorthand: true,
       },
     },
   ],

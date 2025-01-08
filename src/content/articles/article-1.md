@@ -1,10 +1,15 @@
 ---
 title: "Emma Watson to Make Fall 2011 Transfer from Brown to UCF"
 description: "A stupid piece of shit"
-date: "May 24, 2024"
 author: "Author"
-image: { src: "https://static.wikia.nocookie.net/harrypotter/images/0/05/Trio_ootp_2007_2.jpg/revision/latest?cb=20080827145049" }
-testAttribute: "test value"
+date: "2024-04-21"
+category: "Politics"
+image:
+  {
+    src: "https://static.wikia.nocookie.net/harrypotter/images/0/05/Trio_ootp_2007_2.jpg/revision/latest?cb=20080827145049",
+    alt: "",
+  }
+isPublished: true
 ---
 
 Following enduring instances of being doggedly bullied, Emma Watson has fixed upon transferring to a less immature and more pontifically high-brow university.
