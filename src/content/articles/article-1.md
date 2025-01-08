@@ -4,7 +4,11 @@ description: "A stupid piece of shit"
 author: "Author"
 date: "2024-04-21"
 category: "Politics"
-image: { src: "img.png", alt: "" }
+image:
+  {
+    src: "https://astro-news-six.vercel.app/_astro/js.CACpSspq_Z2foz1M.webp",
+    alt: "",
+  }
 isPublished: true
 ---
 
