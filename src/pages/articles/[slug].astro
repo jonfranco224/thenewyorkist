@@ -24,8 +24,13 @@ const { Content } = await render(post);
   <div class="container mx-auto py-10">
     <div class="max-w-[800px] m-auto">
       <h1>{post.data.title}</h1>
-      <p class="pt-4">Ivanna Dover</p>
-      <p class="text-[14px] opacity-[.75] leading-[22px]">January 8th, 2024 <span class="px-1">&bull;</span> 10 min read</p>
+      <div class="flex items-center pt-4">
+        <img class="w-[60px] h-[60px] object-cover rounded-full"src="/authors/ivanna.webp" />
+        <div class="pl-3">
+          <p class="text-[16px]">Ivanna Dover</p>
+          <p class="text-[14px] opacity-[.75] leading-[22px]">January 8th, 2024 <span class="px-0.5">&bull;</span> 10 min read</p>
+        </div>
+      </div>
       <div class="py-10 aspect-video">
         <img 
           class="w-full object-cover rounded-lg overflow-hidden" 
