@@ -1,9 +1,13 @@
 h1 {
-  @apply text-[48px]
+  @apply text-[44px] leading-[50px];
 }
 
-small, p, a {
-  @apply text-[16px];
+p, a {
+  @apply text-[18px] leading-[30px];
+}
+
+small {
+  @apply text-[14px];
 }
 
 body {
@@ -22,4 +26,10 @@ em {
   font-family: "Libre Baskerville", serif;
   font-weight: 400;
   font-style: italic;
+}
+
+.post-body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
