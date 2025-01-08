@@ -1,0 +1,7 @@
+h1 {
+  @apply text-[48px]
+}
+
+small, p, a {
+  @apply text-[16px];
+}

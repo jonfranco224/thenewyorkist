@@ -1,0 +1,28 @@
+---
+import Layout from '../../components/Layout.astro'
+// import Article from '../../components/Article.astro';
+import { render } from 'astro:content'
+import { getCollection } from 'astro:content';
+
+
+// Generate all possible routes for blog posts
+export async function getStaticPaths() {
+  const posts = await getCollection('articles'); // Adjust collection name if needed
+  return posts.map((post) => {
+    return {
+      params: { slug: post.slug },
+      props: { post },
+    };
+  });
+}
+
+// Get the post object passed via props
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+<Layout>
+  <div class=" container mx-auto py-10">
+    <h1>{post.data.title}</h1>
+    <Content />
+  </div>
+</Layout>

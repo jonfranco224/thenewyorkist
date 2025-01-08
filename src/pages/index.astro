@@ -1,11 +1,26 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Layout from '../components/Layout.astro';
+import { getCollection } from 'astro:content';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const allPosts = await getCollection('articles'); // Adjust collection name if needed
 ---
 
 <Layout>
-	<Welcome />
+	<ul class="container mx-auto py-10">
+    {allPosts.map((post) => (
+			<a href={`/articles/${post.slug}`} class="bg-white shadow-md rounded-lg overflow-hidden">
+				<img 
+					class="w-full h-48 object-cover rounded-lg overflow-hidden" 
+					src="https://astro-news-six.vercel.app/_astro/js.CACpSspq_Z2foz1M.webp" 
+					alt="Blog Post Thumbnail">
+				<div class="py-4">
+					<h2 class="text-xl font-semibold text-gray-800">{post.data.title}</h2>
+					<p class="text-gray-600 text-sm mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum...</p>
+					<div class="mt-4">
+							<a href="#" class="text-blue-500 hover:underline text-sm font-medium">Read More</a>
+					</div>
+				</div>
+			</a>
+    ))}
+  </ul>
 </Layout>
