@@ -3,7 +3,7 @@ title: "Article 1 Title"
 description: "A stupid piece of shit"
 date: "May 24, 2024"
 author: "Author"
-image: { src: "derp" }
+image: { src: "https://astro-news-six.vercel.app/_astro/js.CACpSspq_Z2foz1M.webp" }
 testAttribute: "test value"
 ---
 
