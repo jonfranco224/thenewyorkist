@@ -12,13 +12,13 @@ body {
   font-style: normal;
 }
 
-b {
+strong {
   font-family: "Libre Baskerville", serif;
   font-weight: 700;
   font-style: normal;
 }
 
-i {
+em {
   font-family: "Libre Baskerville", serif;
   font-weight: 400;
   font-style: italic;

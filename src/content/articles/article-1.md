@@ -1,10 +1,11 @@
 ---
 title: "Article 1 Title"
 description: "A stupid piece of shit"
-date: "May 24, 2024"
 author: "Author"
-image: { src: "derp" }
-testAttribute: "test value"
+date: "2024-04-21"
+category: "Politics"
+image: { src: "img.png", alt: "" }
+isPublished: true
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non urna eu ligula convallis volutpat.
