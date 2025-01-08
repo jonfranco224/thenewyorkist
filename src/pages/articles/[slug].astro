@@ -22,11 +22,20 @@ const { Content } = await render(post);
 ---
 <Layout>
   <div class="container mx-auto py-10">
-    <h1>{post.data.title}</h1>
-    <img 
-      class="w-full h-48 object-cover rounded-lg overflow-hidden" 
-      src="https://astro-news-six.vercel.app/_astro/js.CACpSspq_Z2foz1M.webp" 
-      alt="Blog Post Thumbnail">
-    <Content />
+    <div class="max-w-[800px] m-auto">
+      <h1>{post.data.title}</h1>
+      <p class="pt-4">Ivanna Dover</p>
+      <p class="text-[14px] opacity-[.75] leading-[22px]">January 8th, 2024 <span class="px-1">&bull;</span> 10 min read</p>
+      <div class="py-10 aspect-video">
+        <img 
+          class="w-full object-cover rounded-lg overflow-hidden" 
+          src="https://insiderfandom.com/wp-content/uploads/2024/12/Why-Did-Emma-Watson-Really-Dislike-Filming-the-Final-Harry-Potter-Movies-Behind-the-Scenes-of-Her-30-Million-Struggle-3-768x432.webp"
+          alt="Blog Post Thumbnail" />
+        
+      </div>
+      <div class="post-body">
+        <Content />
+      </div>
+    </div>
   </div>
 </Layout>
