@@ -21,8 +21,12 @@ const { post } = Astro.props;
 const { Content } = await render(post);
 ---
 <Layout>
-  <div class=" container mx-auto py-10">
+  <div class="container mx-auto py-10">
     <h1>{post.data.title}</h1>
+    <img 
+      class="w-full h-48 object-cover rounded-lg overflow-hidden" 
+      src="https://astro-news-six.vercel.app/_astro/js.CACpSspq_Z2foz1M.webp" 
+      alt="Blog Post Thumbnail">
     <Content />
   </div>
 </Layout>
