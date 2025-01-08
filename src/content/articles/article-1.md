@@ -1,13 +1,13 @@
 ---
 title: "Article 1 Title"
+description: "A stupid piece of shit"
+date: "May 24, 2024"
 author: "Author"
-image: {
-  src: "derp"
-}
+image: { src: "derp" }
 testAttribute: "test value"
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non urna eu ligula convallis volutpat. 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non urna eu ligula convallis volutpat.
 
 ## Subheading
 
@@ -20,4 +20,4 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non urna eu ligu
 
 ## Blockquote
 
-> *"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis lectus at sapien feugiat malesuada."*
+> _"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis lectus at sapien feugiat malesuada."_
