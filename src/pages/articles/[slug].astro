@@ -6,7 +6,6 @@ import { getCollection } from 'astro:content';
 import { formatReadableDate } from '../../lib/date'
 import { estimateReadingTime } from '../../lib/reading-time'
 
-
 // Generate all possible routes for blog posts
 export async function getStaticPaths() {
   const posts = await getCollection('articles'); // Adjust collection name if needed
