@@ -35,12 +35,12 @@
 
 {#if isShown}
   <div
-    class="flex pointer-events-none w-full fixed top-0 left-0 justify-center"
+    class="flex pointer-events-none w-full fixed top-0 left-0 justify-center z-10"
   >
     <div
       in:fly={{ y: -200, duration: 10_000, opacity: 1 }}
       onintroend={() => (areButtonsShown = true)}
-      class="bg-white w-full max-w-96 left-1/2 z-[1000] text-sm text-center pointer-events-auto shadow-xl p-8 flex gap-1.5"
+      class="bg-white w-full max-w-96 left-1/2 text-sm text-center pointer-events-auto shadow-xl p-8 flex gap-1.5"
     >
       <div class="text-lg">
         {#if face === "idle"}🥺

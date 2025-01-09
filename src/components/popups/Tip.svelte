@@ -14,6 +14,7 @@
   };
 
   const showTipMessage = () => {
+    didShow = true;
     isShown = true;
     canShowMessage.current = false;
     lastShown.current = Date.now();
@@ -25,12 +26,13 @@
     }
   });
 
+  let didShow = $state(false);
   let isShown = $state(false);
 </script>
 
 <svelte:body
   onmouseleave={canShowMessage.current ? showTipMessage : undefined}
-  ontouchend={lastShown.current ? showTipMessage : undefined}
+  ontouchend={canShowMessage.current ? showTipMessage : undefined}
 />
 
 {#if isShown}
