@@ -1,5 +1,5 @@
 h1, .h1 {
-  @apply text-[32px] md:text-[44px] leading-[1.15] md:tracking-[-.01em];
+  @apply text-[30px] leading-[1.25] md:text-[46px] md:leading-[1.15] md:tracking-[-.01em];
 }
 
 h2, .h2 {
