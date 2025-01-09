@@ -11,8 +11,8 @@
     // Convert the difference to days
     const diffInDays = diffInMilliseconds / (1000 * 60 * 60 * 24);
 
-    // Check if the difference in days is exactly 1
-    return diffInDays === 1;
+    // Check if the difference in days is larger than 1
+    return diffInDays >= 1;
   };
 
   const hideTipMessage = () => {
