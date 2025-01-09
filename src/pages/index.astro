@@ -7,35 +7,92 @@ const [firstPost, ...posts] = allPosts
 ---
 
 <Layout>
+	
 	<div class="container mx-auto">
-		<section class="border-b py-5 md:py-10 mb-5 md:mb-10">
+		
+		<section class="border-b py-5 md:py-10 mb-5 md:mb-10 flex flex-col xl:flex-row">
 			<a
 				href={`/articles/${firstPost?.slug}`}
-				class="bg-white shadow-md rounded-lg overflow-hidden"
+				class="overflow-hidden w-full xl:w-[80%] xl:pr-20"
 			>
 				<article class="flex flex-col md:flex-row gap-5">
 					<img
-						class="flex-1 aspect-video object-cover overflow-hidden"
+						class="flex-1 md:aspect-[7/5] object-cover overflow-hidden"
 						src={firstPost?.data.image.src}
 						alt={firstPost?.data.image.alt}
 					/>
-					<div class="flex-1">
-						<small class="block w-max bg-[black] text-[12px] text-white rounded-l-full rounded-r-full px-4">{firstPost?.data?.category}</small>
+					<div class="flex-1 lg:pt-[20px]">
+						<small class="block w-max text-[12px] leading-[12px] uppercase">{firstPost?.data?.category}</small>
 						<p class="h2 pt-3 pb-2 text-gray-800">
               {firstPost?.data.title}
             </p>
-						<div class="flex items-start">
-							 <small class="opacity-[.7]">Ivanna Dover <span class="px-1">&bull;</span> January 8th, 2025</small>
-						</div>
 						<p class="text-sm py-2">{firstPost?.data.description}</p>
-						<p class="text-[#0088CC] hover:underline text-sm font-medium mt-2">
-								Read More
-							</p>
+						<div class="flex items-start">
+							<small class="opacity-[.7]">By Ivanna Dover</small>
+					 </div>
 					</div>
 				</article>
 			</a>
+			<div class="w-full xl:w-[20%] outline my-5 xl:my-0 p-3">
+				<p>AD or Latest News</p>
+			</div>
 		</section>
+		
 		<p class="h1 bold mb-5">Latest</p>
+		<section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 pb-10">
+			{
+				[posts[0], posts[1], posts[2], posts[3]].map((post) => (
+					<a
+						href={`/articles/${post.slug}`}
+						class="overflow-hidden flex flex-col"
+					>
+						<img
+							class="w-full aspect-[7/5] object-cover overflow-hidden pb-3"
+							src={post.data.image.src}
+							alt={post.data.image.alt}
+						/>
+						<div class="flex flex-col flex-1">
+							<h2 class="text-xl font-semibold text-gray-800">
+                {post.data.title}
+              </h2>
+							<p class="text-gray-600 text-sm mt-2 mb-4">{post.data.description}</p>
+						</div>
+					</a>
+				))
+			}
+		</section>
+		
+		<div class="py-10">
+			<section class="border-b mb-5 md:mb-10 bg-[rgb(11,12,18)]">
+				<a
+					href={`/articles/${firstPost?.slug}`}
+					class="bg-white shadow-md rounded-lg overflow-hidden"
+				>
+					<article class="flex flex-col md:flex-row gap-5">
+						<div class="flex-1 flex items-center p-[100px]">
+							<div>
+								<!-- <small class="block w-max border-[#fff] text-[12px] rounded-l-full rounded-r-full px-4">{firstPost?.data?.category}</small> -->
+								<p class="h2 pt-3 pb-2 text-white">
+									{firstPost?.data.title}
+								</p>
+								<div class="flex items-start text-white">
+									 <small class="opacity-[.7]">Ivanna Dover <span class="px-1">&bull;</span> January 8th, 2025</small>
+								</div>
+								<p class="text-sm py-2 text-white">{firstPost?.data.description}</p>
+							</div>
+						</div>
+						<img
+							class="flex-1 aspect-video object-cover overflow-hidden"
+							src={firstPost?.data.image.src}
+							alt={firstPost?.data.image.alt}
+						/>
+						
+					</article>
+				</a>
+			</section>
+		</div>
+		
+		<p class="h1 bold mb-5">Arts & Entertainment</p>
 		<section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
 			{
 				posts.map((post) => (
@@ -53,11 +110,6 @@ const [firstPost, ...posts] = allPosts
                 {post.data.title}
               </h2>
 							<p class="text-gray-600 text-sm mt-2 mb-4">{post.data.description}</p>
-							<p
-								class="text-[#0088CC] hover:underline text-sm font-medium mt-auto"
-							>
-								Read More
-							</p>
 						</div>
 					</a>
 				))
