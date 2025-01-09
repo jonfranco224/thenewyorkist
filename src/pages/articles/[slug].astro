@@ -23,14 +23,14 @@ const { Content } = await render(post);
 ---
 
 <Layout>
-  <div class="container mx-auto py-6 md:py-12">
+  <div class="container mx-auto py-8 md:py-12">
     <div class="max-w-[800px] m-auto">
       <h1>{post.data.title}</h1>
       <div class="flex flex-col md:flex-row justify-between md:items-center gap-5 md:gap-0 pt-5">
         <div class="flex items-center ">
-          <img class="w-[60px] h-[60px] object-cover rounded-full" src={`/authors/${post.data.author}.webp`} />
+          <img class="w-[41px] md:w-[41px] h-[41px] md:h-[41px] object-cover rounded-full" src={`/authors/${post.data.author}.webp`} />
           <div class="pl-3">
-            <p class="text-[16px]">{post.data.author}</p>
+            <p class="text-[14px] md:text-[16px]">{post.data.author}</p>
             <p class="text-[14px] opacity-[.75] leading-[22px]">{formatReadableDate(post.data.date)}<span class="px-0.5"> &bull; </span>{estimateReadingTime(post.body)} read</p>
           </div>
         </div>
@@ -74,7 +74,7 @@ const { Content } = await render(post);
           </button> 
         </div>
       </div>
-      <div class=" py-5 my-5 aspect-video border-t border-b">
+      <div class=" pt-5 pb-4 md:pb-5 mt-5 aspect-video border-t">
         <img 
           class="w-full object-cover overflow-hidden" 
           src={post.data.image.src}
