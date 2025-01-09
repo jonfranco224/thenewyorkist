@@ -37,6 +37,7 @@
 
 <svelte:body
   onmouseleave={canShowTipMessage.current ? showTipMessage : undefined}
+  ontouchend={canShowTipMessage.current ? showTipMessage : undefined}
 />
 
 {#if isShown}
