@@ -72,8 +72,8 @@ const [firstPost, ...posts] = allPosts
 					class="bg-white shadow-md rounded-lg overflow-hidden"
 				>
 					<article class="flex flex-col-reverse md:flex-row">
-						<div class="flex-1 md:w-[50%] flex items-center p-[30px] md:p-[50px] lg:p-[100px]">
-							<div>
+						<div class="md:w-[50%] flex items-center p-[30px] md:p-[50px] lg:p-[80px]">
+							<div class="max-w-[450px] m-auto">
 								<p class="h2 pt-3 pb-2 text-white">
 									{firstPost?.data.title}
 								</p>
@@ -83,7 +83,7 @@ const [firstPost, ...posts] = allPosts
 								<p class="text-sm py-2 text-white">{firstPost?.data.description}</p>
 							</div>
 						</div>
-						<div class="flex-1 flex md:w-[50%]">
+						<div class="flex md:w-[50%]">
 							<img
 								class="h-full md:aspect-[7/5] object-cover overflow-hidden"
 								src={firstPost?.data.image.src}
