@@ -1,25 +1,37 @@
 h1, .h1 {
-  @apply text-[32px] leading-[38px] md:text-[44px] md:leading-[50px];
+  @apply text-[32px] md:text-[44px] leading-[1.15] tracking-[-.01em];
 }
 
 h2, .h2 {
-  @apply text-[28px] leading-[34px] md:text-[36px] md:leading-[42px];
+  @apply text-[28px] md:text-[36px] leading-[1.15] tracking-[-.01em];
 }
 
 h3, .h3 {
-  @apply text-[24px] leading-[30px] md:text-[30px] md:leading-[36px];
+  @apply text-[24px] md:text-[30px] leading-[1.15] tracking-[-.01em];
 }
 
 h4, .h4 {
-  @apply text-[20px] leading-[26px] md:text-[24px] md:leading-[30px];
+  @apply text-[20px] md:text-[24px] leading-[1.15] tracking-[-.01em];
 }
 
-p, a {
-  @apply text-[18px] leading-[30px];
+h5, .h5 {
+  @apply text-[18px] md:text-[20px] leading-[1.15] tracking-[-.01em];
 }
 
-small {
-  @apply text-[14px];
+h6, .h6 {
+  @apply text-[18px] md:text-[20px] leading-[1.15] tracking-[-.01em];
+}
+
+p, .p, a, .a {
+  @apply text-[16px] md:text-[18px] leading-[1.65] tracking-[-.01em];
+}
+
+small, .small {
+  @apply text-[14px] leading-[1.4];
+}
+
+.text-extra-small {
+  @apply text-[12px] leading-[1];
 }
 
 body {
@@ -43,9 +55,19 @@ em {
 .post-body {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px;
 }
 
 .post-body a {
   color: #800020
+}
+
+.post-body h1, 
+.post-body h2, 
+.post-body h3, 
+.post-body h4, 
+.post-body h5, 
+.post-body h6 {
+  margin-bottom: 16px; /* Adjust as needed */
+  margin-top: 16px; /* Adjust as needed */
 }

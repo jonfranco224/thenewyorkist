@@ -56,11 +56,14 @@ import NotificationsPopup from './popups/Notifications.svelte'
       async></script>
   </head>
 
-  <body class='bg-[#F8F7F3] m-0 p-4 w-full h-full'>
+  <body class='bg-[#F8F7F3] m-0 w-full h-full'>
     <Nav />
-    <slot />
-    <Footer />
-    <TipPopup client:load />
-    <NotificationsPopup client:load />
+    <main class="contianer px-4">
+      <slot />
+      <Footer />
+      <TipPopup client:load />
+      <NotificationsPopup client:load />
+    </main>
+    
   </body>
 </html>
