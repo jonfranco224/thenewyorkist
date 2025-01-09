@@ -1,32 +1,43 @@
 ---
-import "../styles/globals.css";
-import Footer from "../components/Footer.astro";
-import Nav from "../components/Nav.astro";
-import Tip from "./Tip.svelte";
+import '../styles/globals.css'
+import Footer from '../components/Footer.astro'
+import Nav from '../components/Nav.astro'
+import Tip from './Tip.svelte'
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang='en'>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width' />
+    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+    <meta name='generator' content={Astro.generator} />
+    <meta
+      name='google-adsense-account'
+      content='ca-pub-2655846022144054'
+    />
     <title>The New Yorkist</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel='preconnect' href='https://fonts.googleapis.com' />
     <link
-      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
-      rel="stylesheet"
+      rel='preconnect'
+      href='https://fonts.gstatic.com'
+      crossorigin
+    />
+    <link
+      href='https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap'
+      rel='stylesheet'
     />
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+      name='viewport'
+      content='width=device-width, initial-scale=1.0'
+    />
   </head>
-  <body class="bg-[#F8F7F3] m-0 p-4 w-full h-full">
+  <body class='bg-[#F8F7F3] m-0 p-4 w-full h-full'>
     <Nav />
     <slot />
     <Footer />
-		<Tip client:load />
+    <Tip client:load />
   </body>
 </html>
