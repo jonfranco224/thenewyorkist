@@ -15,9 +15,14 @@
     return diffInDays >= 1;
   };
 
-  const hideTipMessage = () => {
+  const hideTipMessage = (event: MouseEvent) => {
+    if (event.target !== event.currentTarget) {
+      return;
+    }
+
     isShown = false;
     canShowTipMessage.current = false;
+    lastTimeShown.current = new Date();
   };
 
   const showTipMessage = () => {

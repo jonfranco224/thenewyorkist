@@ -1,18 +1,22 @@
 ---
-import Layout from "../components/Layout.astro";
+import Layout from '../components/Layout.astro'
 import { formatReadableDate } from '../lib/date'
 import Terms from '../content/terms.md'
 ---
-<Layout>
-  <main class="py-8 max-w-[70ch] m-auto">
 
+<Layout>
+  <main class='py-8 max-w-[70ch] m-auto'>
     <h1>Terms of Use</h1>
-    <div class="mb-8 mt-0">
-      <em>Last Updated: {formatReadableDate(new Date().toDateString())}</em>
+    <div class='mb-8 mt-0'>
+      <em
+        >Last Updated: {
+          formatReadableDate(new Date().toDateString())
+        }</em
+      >
     </div>
-    
+
     <Terms />
-</main>
+  </main>
 </Layout>
 
 <style is:global>
