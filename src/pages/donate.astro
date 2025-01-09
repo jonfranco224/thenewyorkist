@@ -1,0 +1,20 @@
+---
+import Layout from "../components/Layout.astro";
+import DonateBox from '../components/DonateBox.svelte'
+---
+<Layout>
+  <section class="flex justify-center h-[60dvh] py-8 gap-8 container max-w-[800px] m-auto">
+    <div class="flex flex-col gap-2 w-1/3">
+      <img width="250" src="/logo.png" />
+      <h1 class="text-xl"><strong>We're reader-extorted local news.</strong></h1>
+      <p>Your donation makes local news available to all and supports the crypto day trading addictions and lambo collections of the C-level executives at our parent company.</p>
+    </div>
+    
+    <div class="bg-white p-4 w-2/3 overflow-y-auto">
+      <h2 class="py-2">Select your donation:</h2>
+      <DonateBox />
+    </div>
+
+  </section>
+  
+</Layout>

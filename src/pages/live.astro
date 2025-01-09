@@ -1,7 +1,16 @@
-<iframe 
-class="w-full h-screen"
-src="https://www.youtube.com/embed/8ppn06_6jmk?autoplay=1;controls=0" 
-title="YouTube video player" 
-frameborder="0" 
-allow="autoplay" 
-referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+---
+import Layout from "../components/Layout.astro";
+---
+<Layout>
+  <div class="w-full h-screen max-h-[80dvh]">
+  <iframe 
+    class="w-full h-full z-1"
+    src="https://www.youtube.com/embed/8ppn06_6jmk?autoplay=1;controls=0" 
+    title="YouTube video player" 
+    frameborder="0" 
+    allow="autoplay" 
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen
+  ></iframe>
+</div>
+</Layout>
