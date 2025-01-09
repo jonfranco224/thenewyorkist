@@ -1,7 +1,7 @@
 ---
 title: "Electric Daisy Carnival Prompts Amber Alert for “Molly”"
 description: "Port Orange police issued an Amber Alert today when a young girl by the name of “Molly” went missing at Orlando’s first annual electronic music festival, Electric Daisy Carnival."
-author: "Author"
+author: "Penelope Quill"
 date: "2024-04-21"
 category: "Politics"
 image:

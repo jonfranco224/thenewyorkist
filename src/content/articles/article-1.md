@@ -1,7 +1,7 @@
 ---
 title: "Emma Watson to Make Fall 2011 Transfer from Brown to UCF"
 description: "Following enduring instances of being doggedly bullied, Emma Watson has fixed upon transferring to a less immature and more pontifically high-brow university."
-author: "Author"
+author: "Alistair Graves"
 date: "2024-04-21"
 category: "Politics"
 image:

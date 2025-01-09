@@ -3,6 +3,8 @@ import Layout from '../../components/Layout.astro'
 // import Article from '../../components/Article.astro';
 import { render } from 'astro:content'
 import { getCollection } from 'astro:content';
+import { formatReadableDate } from '../../lib/date'
+import { estimateReadingTime } from '../../lib/reading-time'
 
 
 // Generate all possible routes for blog posts
@@ -26,10 +28,10 @@ const { Content } = await render(post);
       <h1>{post.data.title}</h1>
       <div class="flex flex-col md:flex-row justify-between md:items-center gap-5 md:gap-0 pt-5">
         <div class="flex items-center ">
-          <img class="w-[60px] h-[60px] object-cover rounded-full"src="/authors/ivanna.webp" />
+          <img class="w-[60px] h-[60px] object-cover rounded-full" src={`/authors/${post.data.author}.webp`} />
           <div class="pl-3">
-            <p class="text-[16px]">Ivanna Dover</p>
-            <p class="text-[14px] opacity-[.75] leading-[22px]">January 8th, 2024 <span class="px-0.5">&bull;</span> 10 min read</p>
+            <p class="text-[16px]">{post.data.author}</p>
+            <p class="text-[14px] opacity-[.75] leading-[22px]">{formatReadableDate(post.data.date)}<span class="px-0.5"> &bull; </span>{estimateReadingTime(post.body)} read</p>
           </div>
         </div>
         <div class="flex items-center gap-2">
@@ -74,9 +76,9 @@ const { Content } = await render(post);
       </div>
       <div class=" py-5 my-5 aspect-video border-t border-b">
         <img 
-          class="w-full object-cover rounded-lg overflow-hidden" 
-          src="https://insiderfandom.com/wp-content/uploads/2024/12/Why-Did-Emma-Watson-Really-Dislike-Filming-the-Final-Harry-Potter-Movies-Behind-the-Scenes-of-Her-30-Million-Struggle-3-768x432.webp"
-          alt="Blog Post Thumbnail" />
+          class="w-full object-cover overflow-hidden" 
+          src={post.data.image.src}
+          alt={post.data.image.alt} />
         <small class="block pt-3 opacity-[.75]"><em>{post.data.image.alt}</em></small>
       </div>
       <div class="post-body">
