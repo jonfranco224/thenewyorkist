@@ -1,19 +1,9 @@
 <script lang="ts">
   import { PersistedState } from "runed";
+  import { areDatesOneDayApart } from "../../lib/date";
 
-  const canShowTipMessage = new PersistedState("can-show-tip-message", true);
-  const lastTimeShown = new PersistedState("last-show-tip-message", new Date());
-
-  const areDatesOneDayApart = (date1: Date, date2: Date): boolean => {
-    // Get the difference in time (milliseconds) between the two dates
-    const diffInMilliseconds = Math.abs(date1.getTime() - date2.getTime());
-
-    // Convert the difference to days
-    const diffInDays = diffInMilliseconds / (1000 * 60 * 60 * 24);
-
-    // Check if the difference in days is larger than 1
-    return diffInDays >= 1;
-  };
+  const canShowMessage = new PersistedState("can-show-tip-message", true);
+  const lastShown = new PersistedState("last-show-tip-message", Date.now());
 
   const hideTipMessage = (event: MouseEvent) => {
     if (event.target !== event.currentTarget) {
@@ -21,19 +11,17 @@
     }
 
     isShown = false;
-    canShowTipMessage.current = false;
-    lastTimeShown.current = new Date();
   };
 
   const showTipMessage = () => {
     isShown = true;
+    canShowMessage.current = false;
+    lastShown.current = Date.now();
   };
 
   $effect(() => {
-    const now = new Date();
-    if (areDatesOneDayApart(lastTimeShown.current, now)) {
-      canShowTipMessage.current = true;
-      lastTimeShown.current = now;
+    if (areDatesOneDayApart(lastShown.current, Date.now())) {
+      canShowMessage.current = true;
     }
   });
 
@@ -41,15 +29,15 @@
 </script>
 
 <svelte:body
-  onmouseleave={canShowTipMessage.current ? showTipMessage : undefined}
-  ontouchend={canShowTipMessage.current ? showTipMessage : undefined}
+  onmouseleave={canShowMessage.current ? showTipMessage : undefined}
+  ontouchend={lastShown.current ? showTipMessage : undefined}
 />
 
 {#if isShown}
   <div
     role="button"
     tabindex="-1"
-    class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-80 grid place-content-center z-50"
+    class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-80 grid place-content-center z-50 cursor-auto"
     onclick={hideTipMessage}
     onkeydown={() => {}}
   >

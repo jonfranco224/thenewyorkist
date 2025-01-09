@@ -38,7 +38,10 @@ We reserve the right to:
 
 Activate your device’s microphone, camera, and GPS to monitor your activity at any time.
 Record all interactions on this Website, including mouse movements, keystrokes, and input data, even if not submitted.
-Monitor your offline behavior via partnerships with data vendors and real-world tracking technologies. 5. Third-Party Sharing
+Monitor your offline behavior via partnerships with data vendors and real-world tracking technologies.
+
+#### Third-Party Sharing
+
 Your data may be shared with:
 
 **Advertising Partners:** Companies specializing in hyper-targeted ad campaigns.
