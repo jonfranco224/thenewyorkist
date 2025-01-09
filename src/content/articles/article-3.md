@@ -1,7 +1,7 @@
 ---
 title: "Apple Sues Apple over iPhone 5"
 description: "After building a substantial case of copyright infringement, Apple has taken a monumental step in the history of property ownership laws by suing Apple over the design, hardware, and software of the iPhone 5."
-author: "Author"
+author: "Alistair Graves"
 date: "2024-04-21"
 category: "Politics"
 image:

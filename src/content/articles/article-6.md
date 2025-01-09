@@ -1,7 +1,7 @@
 ---
 title: "Barnes & Noble Introduces New 1,035 Screen eReader, the Nook Book"
 description: "At Barnes & Noble’s NOOK event earlier today, CEO WIlliam Lynch introduced the latest edition to their growing family of eReaders, the Nook Book."
-author: "Author"
+author: "Penelope Quill"
 date: "2024-04-21"
 category: "Politics"
 image:

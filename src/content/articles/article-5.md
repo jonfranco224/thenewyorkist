@@ -1,7 +1,7 @@
 ---
 title: "New Research Shows That Marijuana Gets You Pretty High"
 description: "The latest and perhaps most shocking wave of marijuana research comes now from the heart of the UCF branch of NORML, which revealed its startling new find this weekend."
-author: "Author"
+author: "Penelope Quill"
 date: "2024-04-21"
 category: "Politics"
 image:
