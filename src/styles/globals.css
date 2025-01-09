@@ -1,37 +1,37 @@
 h1, .h1 {
-  @apply text-[32px] md:text-[44px] leading-[1.15] tracking-[-.01em];
+  @apply text-[32px] md:text-[44px] leading-[1.15] md:tracking-[-.01em];
 }
 
 h2, .h2 {
-  @apply text-[28px] md:text-[36px] leading-[1.15] tracking-[-.01em];
+  @apply text-[28px] md:text-[36px] leading-[1.15] md:tracking-[-.01em];
 }
 
 h3, .h3 {
-  @apply text-[24px] md:text-[30px] leading-[1.15] tracking-[-.01em];
+  @apply text-[24px] md:text-[30px] leading-[1.15] md:tracking-[-.01em];
 }
 
 h4, .h4 {
-  @apply text-[20px] md:text-[24px] leading-[1.15] tracking-[-.01em];
+  @apply text-[20px] md:text-[24px] leading-[1.15] md:tracking-[-.01em];
 }
 
 h5, .h5 {
-  @apply text-[18px] md:text-[20px] leading-[1.15] tracking-[-.01em];
+  @apply text-[20px] md:text-[20px] leading-[1.15] md:tracking-[-.01em];
 }
 
 h6, .h6 {
-  @apply text-[18px] md:text-[20px] leading-[1.15] tracking-[-.01em];
+  @apply text-[20px] md:text-[20px] leading-[1.15] tracking-[0.01em];
 }
 
 p, .p, a, .a {
-  @apply text-[16px] md:text-[18px] leading-[1.65] tracking-[-.01em];
+  @apply text-[16px] md:text-[18px] leading-[1.65] md:tracking-[-.01em];
 }
 
 small, .small {
-  @apply text-[14px] leading-[1.4];
+  @apply text-[14px] md:text-[14px] leading-[1.5] md:leading-[1.4];
 }
 
 .text-extra-small {
-  @apply text-[12px] leading-[1];
+  @apply text-[14px] md:text-[14px] md:text-[12px] leading-[1];
 }
 
 body {
