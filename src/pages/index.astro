@@ -4,73 +4,63 @@ import { getCollection } from "astro:content";
 
 const allPosts = await getCollection("articles"); // Adjust collection name if needed
 const [firstPost, ...posts] = allPosts
-console.log(allPosts)
 ---
 
 <Layout>
-
-	<div class="container mx-auto py-6 flex gap-8">
-		<section class="w-[70%]">
-		<a
-			href={`/articles/${firstPost?.slug}`}
-			class="bg-white shadow-md rounded-lg overflow-hidden"
-		>
-			<article>
-				<img
-					class="w-full h-96 object-cover overflow-hidden"
-					src={firstPost?.data.image.src}
-					alt={firstPost?.data.image.alt}
-				/>
-				<div class="py-4">
-					<h2 class="text-xl font-semibold text-gray-800">
-						{firstPost?.data.title}
-					</h2>
-					<p class="text-gray-600 text-sm mt-2">{firstPost?.data.description}</p>
-					<div class="mt-4">
-						<a
-							href="#"
-							class="text-blue-500 hover:underline text-sm font-medium"
-						>
-							Read More
-						</a>
+	<div class="container mx-auto">
+		<section class="border-b py-10 mb-10">
+			<a
+				href={`/articles/${firstPost?.slug}`}
+				class="bg-white shadow-md rounded-lg overflow-hidden"
+			>
+				<article class="flex flex-col md:flex-row gap-5">
+					<img
+						class="flex-1 aspect-video object-cover overflow-hidden"
+						src={firstPost?.data.image.src}
+						alt={firstPost?.data.image.alt}
+					/>
+					<div class="flex-1">
+						<small class="block w-max bg-[black] text-[12px] text-white rounded-l-full rounded-r-full px-4">{firstPost?.data?.category}</small>
+						<p class="h2 pt-3 pb-2 text-gray-800">
+              {firstPost?.data.title}
+            </p>
+						<div class="flex items-start">
+							 <small class="opacity-[.7]">Ivanna Dover <span class="px-1">&bull;</span> January 8th, 2025</small>
+						</div>
+						<p class="text-sm py-2">{firstPost?.data.description}</p>
+						<p class="text-[#0088CC] hover:underline text-sm font-medium mt-2">
+								Read More
+							</p>
 					</div>
-				</div>
-			</article>
-		</a>
-	</section>
-	<section class="w-[30%]">
-		<ul>
+				</article>
+			</a>
+		</section>
+		<section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
 			{
 				posts.map((post) => (
 					<a
 						href={`/articles/${post.slug}`}
-						class="bg-white shadow-md rounded-lg overflow-hidden"
+						class="overflow-hidden flex flex-col"
 					>
 						<img
-							class="w-full h-48 object-cover overflow-hidden"
+							class="w-full h-48 object-cover overflow-hidden pb-3"
 							src={post.data.image.src}
 							alt={post.data.image.alt}
 						/>
-						<div class="py-4">
+						<div class="flex flex-col flex-1">
 							<h2 class="text-xl font-semibold text-gray-800">
-								{post.data.title}
-							</h2>
-							<p class="text-gray-600 text-sm mt-2">{post.data.description}</p>
-							<div class="mt-4">
-								<a
-									href={`/articles/${post.slug}`}
-									class="text-blue-500 hover:underline text-sm font-medium"
-								>
-									Read More
-								</a>
-							</div>
+                {post.data.title}
+              </h2>
+							<p class="text-gray-600 text-sm mt-2 mb-4">{post.data.description}</p>
+							<p
+								class="text-[#0088CC] hover:underline text-sm font-medium mt-auto"
+							>
+								Read More
+							</p>
 						</div>
 					</a>
 				))
 			}
-		</ul>
-	</section>
-</div>
-
-
+		</section>
+	</div>
 </Layout>
