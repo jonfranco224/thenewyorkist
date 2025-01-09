@@ -43,7 +43,7 @@
   <div
     role="button"
     tabindex="-1"
-    class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-80 grid place-content-center"
+    class="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-80 grid place-content-center z-50"
     onclick={hideTipMessage}
     onkeydown={() => {}}
   >
