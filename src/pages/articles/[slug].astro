@@ -21,16 +21,29 @@ const { post } = Astro.props;
 const { Content } = await render(post);
 ---
 <Layout>
-  <div class="container mx-auto py-10">
+  <div class="container mx-auto py-12">
     <div class="max-w-[800px] m-auto">
       <h1>{post.data.title}</h1>
-      <div class="flex items-center pt-4">
-        <img class="w-[60px] h-[60px] object-cover rounded-full"src="/authors/ivanna.webp" />
-        <div class="pl-3">
-          <p class="text-[16px]">Ivanna Dover</p>
-          <p class="text-[14px] opacity-[.75] leading-[22px]">January 8th, 2024 <span class="px-0.5">&bull;</span> 10 min read</p>
+      <div class="flex justify-between items-center pt-4">
+        <div class="flex items-center ">
+          <img class="w-[60px] h-[60px] object-cover rounded-full"src="/authors/ivanna.webp" />
+          <div class="pl-3">
+            <p class="text-[16px]">Ivanna Dover</p>
+            <p class="text-[14px] opacity-[.75] leading-[22px]">January 8th, 2024 <span class="px-0.5">&bull;</span> 10 min read</p>
+          </div>
+        </div>
+        <div>
+          <button class='border-2 border-[black] rounded-full w-[50px] h-[50px] flex justify-center items-center' aria-label="More sharing options ..." type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path>
+              <path d="M16 8l-4-4-4 4"></path>
+              <line x1="12" y1="4" x2="12" y2="15"></line>
+            </svg>
+            
+          </button>
         </div>
       </div>
+      
       <div class="py-10 aspect-video">
         <img 
           class="w-full object-cover rounded-lg overflow-hidden" 

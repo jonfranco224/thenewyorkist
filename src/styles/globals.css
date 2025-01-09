@@ -33,3 +33,7 @@ em {
   flex-direction: column;
   gap: 20px;
 }
+
+.post-body a {
+  color: #800020
+}
