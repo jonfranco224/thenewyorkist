@@ -1,5 +1,10 @@
 :root {
   --dark-gray: rgb(68,68,68);
+  --black: rgb(10, 12, 16);
+}
+
+h1, h2, h3, h4, h5, h6, p, a {
+  color: var(--black);
 }
 
 h1, .h1 {
@@ -63,7 +68,7 @@ em {
 }
 
 .post-body a {
-  color: #800020
+  color: #800020;
 }
 
 .post-body h1, 
