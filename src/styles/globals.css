@@ -1,3 +1,7 @@
+:root {
+  --dark-gray: rgb(68,68,68);
+}
+
 h1, .h1 {
   @apply text-[30px] leading-[1.25] md:text-[46px] md:leading-[1.15] md:tracking-[-.01em];
 }
