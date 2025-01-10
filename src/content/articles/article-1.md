@@ -6,8 +6,8 @@ date: "2024-04-21"
 category: "Local"
 image:
   {
-   src: "https://i.abcnewsfe.com/a/f23193b3-a3b8-4a1e-9e31-f586e2ec5dda/new-york-flood-weather-ap-moe-003-230930_1696083916990_hpMain_16x9.jpg?w=992",
-    alt: "Photo by some dude we found on craigslist",
+   src: "/images/new-york-flood.avif",
+   alt: "Photo by some dude we found on craigslist",
   }
 isPublished: true
 ---
