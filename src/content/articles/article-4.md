@@ -3,7 +3,7 @@ title: "The 19th Annual Race for the Cure Might Be Closest Race Yet"
 description: "As expected, UCF’s 19th annual Race for the Cure didn’t fail to bring the excitement and spirit it brings every year."
 author: "Alistair Graves"
 date: "2024-04-21"
-category: "Politics"
+category: "Local"
 image:
   {
     src: "https://media.istockphoto.com/id/539281673/photo/race-to-the-finish.jpg?s=612x612&w=0&k=20&c=-Lb-FczPP_0tLnSwLFSHR8_n9hXriBUoH5ZwWkskqUI=",
