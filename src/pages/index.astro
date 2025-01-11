@@ -2,9 +2,18 @@
 import Layout from "../components/Layout.astro";
 import { getCollection } from "astro:content";
 
-const allPosts = await getCollection("articles"); // Adjust collection name if needed
-const [firstPost, ...posts] = allPosts
-const culturePost = allPosts[3]
+const allPosts = await getCollection("articles");
+
+// Sort posts by date in descending order (newest first)
+allPosts.sort((a, b) => {
+  const dateA = new Date(a.data.date).getTime(); // Convert to timestamp
+  const dateB = new Date(b.data.date).getTime(); // Convert to timestamp
+  return dateA - dateB;
+});
+
+// Access specific posts
+const firstPost = allPosts[0];
+const culturePost = allPosts[4];
 ---
 
 <Layout>
@@ -71,7 +80,7 @@ const culturePost = allPosts[3]
 		
 		<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-5 pb-5 md:pb-5 border-b">
 			{
-				[posts[0], posts[1], posts[2], posts[3]].map((post) => (
+				[allPosts[0], allPosts[1], allPosts[2], allPosts[3]].map((post) => (
 					<a
 						href={`/articles/${post.slug}`}
 						class="flex flex-col"
@@ -128,7 +137,7 @@ const culturePost = allPosts[3]
 		<p class="!leading-[1] mt-5">The Intern Desk</p>
 		<section class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-3 pt-5  lg:[&>*]:px-4 [&>:first-child]:pl-0 [&>:last-child]:pr-0 [&>:last-child]:border-0 gap-5 lg:gap-0">
 			{
-				[posts[0], posts[1], posts[2]].map((post) => (
+				[allPosts[0], allPosts[1], allPosts[2]].map((post) => (
 					<a
 						href={`/articles/${post.slug}`}
 						class="flex flex-col lg:border-r"
@@ -147,7 +156,7 @@ const culturePost = allPosts[3]
 		</section>
 		<section class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-3 py-5 md:pb-5 border-b lg:[&>*]:px-4 [&>:first-child]:pl-0 [&>:last-child]:pr-0 [&>:last-child]:border-0 gap-5 lg:gap-0">
 			{
-				[posts[0], posts[1], posts[2]].map((post) => (
+				[allPosts[0], allPosts[1], allPosts[2]].map((post) => (
 					<a
 						href={`/articles/${post.slug}`}
 						class="flex flex-col lg:border-r"
@@ -168,7 +177,7 @@ const culturePost = allPosts[3]
 		<p class="!leading-[1] mt-5">In The Know</p>
 		<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 py-5 gap-10 md:gap-5 pb-5 md:pb-5 border-b">
 			{
-				[posts[0], posts[1], posts[2], posts[3]].map((post) => (
+				[allPosts[0], allPosts[1], allPosts[2], allPosts[3]].map((post) => (
 					<a
 						href={`/articles/${post.slug}`}
 						class="flex flex-col"
@@ -263,3 +272,4 @@ const culturePost = allPosts[3]
 		
 	</div>
 </Layout>
+

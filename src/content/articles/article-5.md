@@ -2,11 +2,11 @@
 title: "Immersive Play “Court Room” Has Theatre World Buzzing"
 description: "Full of drama, intrigue, and an uncanny resemblance to real world consequences, this play isn't worth a miss."
 author: "Penelope Quill"
-date: "2024-04-21"
+date: "2024-04-24"
 category: "Art"
 image:
   {
-    src: "https://res.cloudinary.com/ddpw0my3h/image/upload/v1736551232/court-room-2_gdtsah.webp",
+    src: "https://res.cloudinary.com/ddpw0my3h/image/upload/f_auto/v1736551232/court-room-2_gdtsah.webp",
     alt: "",
   }
 isPublished: true

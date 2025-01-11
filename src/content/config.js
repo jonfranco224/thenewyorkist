@@ -1,7 +1,9 @@
 import { defineCollection, z } from "astro:content";
+import { glob } from "astro/loaders";
 
 export const collections = {
   articles: defineCollection({
+    type: 'content',
     schema: z.object({
       // Title of the article
       title: z.string().min(1),
