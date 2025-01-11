@@ -39,7 +39,7 @@ const culturePost = allPosts[4];
 					<div class="md:flex-1 lg:py-[1px]">
 						<div class="w-full max-w-full lg:max-w-[500px]">
 							<small class="block w-max text-extra-small uppercase bold italic">{firstPost?.data?.category}</small>
-							<p class="title h3 pt-3 pb-2 text-gray-800 font-bold">
+							<p class="title h3 pt-3 pb-2 font-bold">
 								{firstPost?.data.title}
 							</p>
 							<p class="small pb-2 text-[var(--dark-gray)]">{firstPost?.data.description}</p>
@@ -56,13 +56,13 @@ const culturePost = allPosts[4];
 					<div class="flex-1 flex flex-col border-0 md:border-r lg:border-0 pr-5 lg:pr-0">
 						<a href={`/articles/${allPosts[1].slug}`} class="h-[50%] border-b py-3 lg:pt-0">
 							<small class="pb-1 block w-max text-[12px] lg:text-[10px] uppercase bold italic">{allPosts[1]?.data?.category}</small>
-							<p class="title text-[14px] lg:text-[13px] !leading-[1.4] lg:!leading-[1.25] text-gray-800 font-bold">
+							<p class="title text-[14px] lg:text-[13px] !leading-[1.4] lg:!leading-[1.25] font-bold">
 								{allPosts[1]?.data?.title}
 							</p>
 						</a>
 						<a href={`/articles/${allPosts[2].slug}`} class="h-[50%] border-b md:border-0 lg:border-b py-3">
 							<small class="pb-1 block w-max text-[12px] lg:text-[10px] uppercase bold italic">{allPosts[2]?.data?.category}</small>
-							<p class="title text-[14px] lg:text-[13px] !leading-[1.4] lg:!leading-[1.25] text-gray-800 font-bold">
+							<p class="title text-[14px] lg:text-[13px] !leading-[1.4] lg:!leading-[1.25] font-bold">
 								{allPosts[2]?.data?.title}
 							</p>
 						</a>
@@ -70,13 +70,13 @@ const culturePost = allPosts[4];
 					<div class="flex-1 flex flex-col">
 						<a href={`/articles/${allPosts[3].slug}`} class="h-[50%] py-3 border-b">
 							<small class="pb-1 block w-max text-[12px] lg:text-[10px] uppercase bold italic">{allPosts[3]?.data?.category}</small>
-							<p class="title text-[14px] lg:text-[13px] !leading-[1.4] lg:!leading-[1.25] text-gray-800 font-bold">
+							<p class="title text-[14px] lg:text-[13px] !leading-[1.4] lg:!leading-[1.25] font-bold">
 								{allPosts[3]?.data?.title}
 							</p>
 						</a>
 						<a href={`/articles/${allPosts[4].slug}`} class="h-[50%] py-3 lg:pb-0">
 							<small class="pb-1 block w-max text-[12px] lg:text-[10px] uppercase bold italic">{allPosts[4]?.data?.category}</small>
-							<p class="title text-[14px] lg:text-[13px] !leading-[1.4] lg:!leading-[1.25] text-gray-800 font-bold">
+							<p class="title text-[14px] lg:text-[13px] !leading-[1.4] lg:!leading-[1.25] font-bold">
 								{allPosts[4]?.data?.title}
 							</p>
 						</a>
@@ -161,6 +161,7 @@ const culturePost = allPosts[4];
 				))
 			}
 		</section>
+
 		<section class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-3 py-5 md:pb-5 border-b lg:[&>*]:px-4 [&>:first-child]:pl-0 [&>:last-child]:pr-0 [&>:last-child]:border-0 gap-5 lg:gap-0">
 			{
 				[allPosts[0], allPosts[1], allPosts[2]].map((post) => (
@@ -207,6 +208,7 @@ const culturePost = allPosts[4];
 				))
 			}
 		</section>
+
 		<p class="!leading-[1] mt-5">The Metro Beat</p>
 		<section class="border-b py-5 md:py-5 mb-5 flex flex-col lg:flex-row">
 			<a
@@ -221,7 +223,7 @@ const culturePost = allPosts[4];
 					/>
 					<div class="lg:py-[1px]">
 						<div class="w-full max-w-full lg:max-w-[500px]">
-							<p class="title h3 pb-2 text-gray-800 font-bold">
+							<p class="title h3 pb-2 font-bold">
 								{firstPost?.data.title}
 							</p>
 							<div class="flex items-start pt-2 text-extra-small italic">
@@ -237,14 +239,14 @@ const culturePost = allPosts[4];
 					<div class="flex-1 flex flex-col border-0 md:border-r lg:border-0 pr-5 lg:pr-0">
 						<a href="/" class="h-[50%] border-b py-3 lg:pt-0">
 							<small class="pb-2 block w-max text-[12px] lg:text-[10px] uppercase bold italic">{allPosts[1]?.data?.category}</small>
-							<p class="title !leading-[1.4] lg:!leading-[1.25] text-gray-800 font-bold">
+							<p class="title !leading-[1.4] lg:!leading-[1.25] font-bold">
 								{allPosts[1]?.data?.title}
 							</p>
 							<small class="pt-2 block w-max text-[12px] lg:text-[10px] capitalize bold italic">By {allPosts[1]?.data?.author}</small>
 						</a>
 						<a href="/" class="h-[50%] border-b md:border-0 lg:border-b py-3">
 							<small class="pb-2 block w-max text-[12px] lg:text-[10px] uppercase bold italic">{allPosts[2]?.data?.category}</small>
-							<p class="title !leading-[1.4] lg:!leading-[1.25] text-gray-800 font-bold">
+							<p class="title !leading-[1.4] lg:!leading-[1.25] font-bold">
 								{allPosts[2]?.data?.title}
 							</p>
 							<small class="pt-2 block w-max text-[12px] lg:text-[10px] capitalize bold italic">By {allPosts[2]?.data?.author}</small>
@@ -253,14 +255,14 @@ const culturePost = allPosts[4];
 					<div class="flex-1 flex flex-col">
 						<a href="/" class="h-[50%] py-3 border-b">
 							<small class="pb-2 block w-max text-[12px] lg:text-[10px] uppercase bold italic">{allPosts[3]?.data?.category}</small>
-							<p class="title !leading-[1.4] lg:!leading-[1.25] text-gray-800 font-bold">
+							<p class="title !leading-[1.4] lg:!leading-[1.25] font-bold">
 								{allPosts[3]?.data?.title}
 							</p>
 							<small class="pt-2 block w-max text-[12px] lg:text-[10px] capitalize bold italic">By {allPosts[3]?.data?.author}</small>
 						</a>
 						<a href="/" class="h-[50%] py-3 lg:pb-0">
 							<small class="pb-2 block w-max text-[12px] lg:text-[10px] uppercase bold italic">{allPosts[4]?.data?.category}</small>
-							<p class="title !leading-[1.4] lg:!leading-[1.25] text-gray-800 font-bold">
+							<p class="title !leading-[1.4] lg:!leading-[1.25] font-bold">
 								{allPosts[4]?.data?.title}
 							</p>
 							<small class="pt-2 block w-max text-[12px] lg:text-[10px] capitalize bold italic">By {allPosts[4]?.data?.author}</small>
@@ -276,7 +278,6 @@ const culturePost = allPosts[4];
 				Donate
 			</a>
 		</section>
-		
 	</div>
 </Layout>
 
