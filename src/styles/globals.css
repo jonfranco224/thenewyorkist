@@ -84,6 +84,10 @@ em {
   margin-top: 16px; /* Adjust as needed */
 }
 
+.post-body a {
+  text-decoration: underline;
+}
+
 a:hover .title {
   text-decoration: underline;
 }
