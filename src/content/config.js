@@ -24,6 +24,8 @@ export const collections = {
         "World",
         "Local",
         "Opinion",
+        "Art",
+        "Metro Beat"
       ]),
       image: z.object({
         src: z.string(),

@@ -1,25 +1,17 @@
 ---
-title: "Apple Sues Apple over iPhone 5"
-description: "After building a substantial case of copyright infringement, Apple has taken a monumental step in the history of property ownership laws by suing Apple over the design, hardware, and software of the iPhone 5."
+title: "Park Squirrel Strike Hits Day 20 Amid Ongoing Talks"
+description: "Union and park officials remain locked in discussions as the squirrel strike disrupts opportunities for visitors to capture how cute they are."
 author: "Alistair Graves"
 date: "2024-04-21"
-category: "Technology"
+category: "Metro Beat"
 image:
   {
-    src: "https://assets.entrepreneur.com/content/3x2/2000/20180329140735-tim-cook.jpeg",
+    src: "https://res.cloudinary.com/ddpw0my3h/image/upload/v1736554387/squirrel_copy_mcyrie.png",
     alt: "",
   }
 isPublished: true
 ---
 
-After building a substantial case of copyright infringement, Apple has taken a monumental step in the history of property ownership laws by suing Apple over the design, hardware, and software of the iPhone 5.
+The Park Squirrel Strike has reached its 20th day, with no resolution in sight as negotiations between the union and park officials continue. The strike, initiated over demands for better working conditions and increased nut rations, has left visitors without the usual spectacle of mischievous squirrels stealing fries and posing for impromptu photos.
 
-“Speaking bluntly, the developers at Apple clearly plagiarized Apple’s groundbreaking design, with only minor modifications,” said Apple CEO Tim Cook during a legal proceeding for the case of Apple vs. Apple. ”It’s appalling that Apple thought they could get away with this.”
-
-The recent litigation by Apple Inc. has spawned a far reaching investigation of patents for other technologies, all of which are claimed to be owned by Apple as well as Apple.
-
-“It’s impossible that Apple filed these patents at the exact same moment and with the same choice of words as Apple,” stated journalist Thomas Friedman in the New York Times article “Why Apple Needs to Fight Apple”, “I assume that either foul play has occurred or we are witnessing an unintended bureaucratic nightmare.”
-
-Apple CEO Tim Cook has responded to the numerous patent infringement claims by stating that “Apple’s research and development is entirely internal, and that any likeness of Apple products to Apple products is entirely coincidental.”
-
-In response to Tim Cook’s released statements, Tim Cook castigated Tim Cook for “blatantly disregarding the evils of his persuasive powers” and “coming up with such a shitty maps software.”
+“It’s not just about the food—it’s about respect,” said union representative Nutty McTail. “We’re standing up for our rights, one acorn at a time.” Visitors have expressed mixed feelings, with some missing the quirky interactions while others enjoy their meals uninterrupted.
