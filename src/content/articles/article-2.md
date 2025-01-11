@@ -6,7 +6,7 @@ date: "2024-04-21"
 category: "Technology"
 image:
   {
-    src: "https://res.cloudinary.com/ddpw0my3h/image/upload/v1736552497/plane-in-house_rgkvre.webp",
+    src: "https://res.cloudinary.com/ddpw0my3h/image/upload/f_auto/v1736552497/plane-in-house_rgkvre.webp",
     alt: "",
   }
 isPublished: true
