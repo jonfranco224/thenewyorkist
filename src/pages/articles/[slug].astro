@@ -34,7 +34,7 @@ const { Content } = await render(post);
       <h1>{post.data.title}</h1>
       <div class="flex flex-col md:flex-row justify-between md:items-center gap-5 md:gap-0 pt-5">
         <div class="flex items-center ">
-          <img class="w-[41px] md:w-[41px] h-[41px] md:h-[41px] object-cover rounded-full" src={`/authors/${post.data.author}.webp`} />
+          <img class="w-[41px] md:w-[41px] h-[41px] md:h-[41px] object-cover rounded-full" src="https://res.cloudinary.com/ddpw0my3h/image/upload/v1736559312/Alistair_Graves_n8rlgz.webp" />
           <div class="pl-3">
             <p class="text-[14px] md:text-[16px]">{post.data.author}</p>
             <p class="text-[14px] opacity-[.75] leading-[22px]">{formatReadableDate(post.data.date)}<span class="px-0.5"> &bull; </span>{estimateReadingTime(post.body)} read</p>
