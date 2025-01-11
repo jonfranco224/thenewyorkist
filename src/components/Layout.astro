@@ -41,9 +41,9 @@ const seo = Astro.props?.seo;
         description={seo.description}
         openGraph={{
           basic: {
-            title: "",
-            type: "",
-            image: seo.image
+            title: seo.title,
+            type: seo.type,
+            image: seo.image.src
           }
         }}
       />

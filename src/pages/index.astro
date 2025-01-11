@@ -16,7 +16,14 @@ const firstPost = allPosts[0];
 const culturePost = allPosts[4];
 ---
 
-<Layout>
+<Layout
+	seo={{ 
+		title: 'The New Yorkist',
+		description: 'Your Most Trusted News Source Since 1624 – Delivering reliable, timely, and accurate news for over 50 years. Stay informed with updates you can count on!',
+		type: 'website',
+		image: { src: '/logo.png' }
+	}}
+>
 	<div class="container mx-auto">
 		<section class="border-b py-5 md:py-5 mb-5 flex flex-col lg:flex-row">
 			<a
