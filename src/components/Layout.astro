@@ -4,6 +4,10 @@ import Footer from '../components/Footer.astro'
 import Nav from '../components/Nav.astro'
 import TipPopup from './popups/Tip.svelte'
 import NotificationsPopup from './popups/Notifications.svelte'
+import { SEO } from "astro-seo";
+
+const seo = Astro.props?.seo;
+
 ---
 
 <!doctype html>
@@ -12,6 +16,7 @@ import NotificationsPopup from './popups/Notifications.svelte'
     <meta charset='UTF-8' />
     <meta name='viewport' content='width=device-width' />
     <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+    <link rel="sitemap" href="/sitemap-index.xml" />
     <meta name='generator' content={Astro.generator} />
     <meta
       name='google-adsense-account'
@@ -29,6 +34,21 @@ import NotificationsPopup from './popups/Notifications.svelte'
       href='https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap'
       rel='stylesheet'
     />
+    
+    {seo ? (
+      <SEO
+        title={seo.title}
+        description={seo.description}
+        openGraph={{
+          basic: {
+            title: "",
+            type: "",
+            image: seo.image
+          }
+        }}
+      />
+    ) : null}
+    
 
     <meta
       name='viewport'

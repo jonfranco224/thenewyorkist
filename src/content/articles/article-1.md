@@ -1,17 +1,16 @@
 ---
-title: "Sanitation Department Bets on Innovation to Solve Increased Flooding"
-description: "Following a series of budget increases, the sanitation department is investing in advanced waste management technology, including AI-powered plungers, to finally tackle the city's persistent flooding problem."
+title: "Sanitation Unveils AI-Powered Plungers to Address Flooding"
+description: "After budget increases, the sanitation department is using advanced tech, like AI plungers, to tackle flooding."
 author: "Alistair Graves"
 date: "2024-04-21"
 category: "Local"
 image:
   {
-   src: "/images/new-york-flood.avif",
+   src: "https://res.cloudinary.com/ddpw0my3h/image/upload/v1736551957/city-flooding_ytehfc.webp",
    alt: "Photo by some dude we found on craigslist",
   }
 isPublished: true
 ---
-
 
 In an ambitious move to combat the city's long-standing flooding issues, the sanitation department has announced significant investments in advanced waste management technology. These upgrades come as part of a series of recent budget increases aimed at modernizing infrastructure and addressing recurring environmental challenges. Among the new innovations being introduced are AI-powered plungers—sophisticated tools designed to clear clogged drainage systems more efficiently and prevent blockages that exacerbate flooding during heavy rains. This technology is expected to streamline maintenance operations and reduce response times, offering a much-needed solution to a problem that has plagued the city for years.
 

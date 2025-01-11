@@ -1,11 +1,10 @@
 ---
 import Layout from "../components/Layout.astro";
 import { getCollection } from "astro:content";
-// Culture Post
-import * as culturePost from '../content/articles/article-6.md';
 
 const allPosts = await getCollection("articles"); // Adjust collection name if needed
 const [firstPost, ...posts] = allPosts
+const culturePost = allPosts[3]
 ---
 
 <Layout>
@@ -13,7 +12,7 @@ const [firstPost, ...posts] = allPosts
 		<section class="border-b py-5 md:py-5 mb-5 flex flex-col lg:flex-row">
 			<a
 				href={`/articles/${firstPost?.slug}`}
-				class="flex w-full lg:w-[75%] lg:pr-6"
+				class="flex w-full lg:w-[81%] lg:pr-6"
 			>
 				<article class="flex flex-col md:flex-row gap-5">
 					<img
@@ -39,30 +38,30 @@ const [firstPost, ...posts] = allPosts
 				<!-- <p class="small font-bold pb-2">Spotlight</p> -->
 				<div class="flex flex-col md:flex-row lg:flex-col gap-0 md:gap-4 lg:gap-0">
 					<div class="flex-1 flex flex-col border-0 md:border-r lg:border-0 pr-5 lg:pr-0">
-						<a href="/" class="h-[50%] border-b py-3 lg:pt-0">
-							<small class="pb-1 block w-max text-[12px] lg:text-[10px] uppercase bold italic">Metro Beat</small>
+						<a href={`/articles/${allPosts[1].slug}`} class="h-[50%] border-b py-3 lg:pt-0">
+							<small class="pb-1 block w-max text-[12px] lg:text-[10px] uppercase bold italic">{allPosts[1]?.data?.category}</small>
 							<p class="text-[14px] lg:text-[13px] !leading-[1.4] lg:!leading-[1.25] text-gray-800 font-bold">
-								Barnes & Noble Introduces New 1,035 Screen eReader, the Nook Book
+								{allPosts[1]?.data?.title}
 							</p>
 						</a>
-						<a href="/" class="h-[50%] border-b md:border-0 lg:border-b py-3">
-							<small class="pb-1 block w-max text-[12px] lg:text-[10px] uppercase bold italic">Arts</small>
+						<a href={`/articles/${allPosts[2].slug}`} class="h-[50%] border-b md:border-0 lg:border-b py-3">
+							<small class="pb-1 block w-max text-[12px] lg:text-[10px] uppercase bold italic">{allPosts[2]?.data?.category}</small>
 							<p class="text-[14px] lg:text-[13px] !leading-[1.4] lg:!leading-[1.25] text-gray-800 font-bold">
-								Electric Daisy Carnival Prompts Amber Alert for “Molly”
+								{allPosts[2]?.data?.title}
 							</p>
 						</a>
 					</div>
 					<div class="flex-1 flex flex-col">
-						<a href="/" class="h-[50%] py-3 border-b">
-							<small class="pb-1 block w-max text-[12px] lg:text-[10px] uppercase bold italic">NEWS</small>
+						<a href={`/articles/${allPosts[3].slug}`} class="h-[50%] py-3 border-b">
+							<small class="pb-1 block w-max text-[12px] lg:text-[10px] uppercase bold italic">{allPosts[3]?.data?.category}</small>
 							<p class="text-[14px] lg:text-[13px] !leading-[1.4] lg:!leading-[1.25] text-gray-800 font-bold">
-								The 19th Annual Race for the Cure Might Be Closest Race Yet
+								{allPosts[3]?.data?.title}
 							</p>
 						</a>
-						<a href="/" class="h-[50%] py-3 lg:pb-0">
-							<small class="pb-1 block w-max text-[12px] lg:text-[10px] uppercase bold italic">OPINION</small>
+						<a href={`/articles/${allPosts[4].slug}`} class="h-[50%] py-3 lg:pb-0">
+							<small class="pb-1 block w-max text-[12px] lg:text-[10px] uppercase bold italic">{allPosts[4]?.data?.category}</small>
 							<p class="text-[14px] lg:text-[13px] !leading-[1.4] lg:!leading-[1.25] text-gray-800 font-bold">
-								New Research Shows That Marijuana Gets You Pretty High
+								{allPosts[4]?.data?.title}
 							</p>
 						</a>
 					</div>	
@@ -99,26 +98,26 @@ const [firstPost, ...posts] = allPosts
 		<div class="py-5 md:py-5 border-b">
 			<section class="bg-[rgb(11,12,18)]">
 				<a
-					href={`/articles/${culturePost?.frontmatter?.slug}`}
+					href={`/articles/${culturePost?.slug}`}
 					class="bg-white shadow-md rounded-lg overflow-hidden"
 				>
 					<article class="flex flex-col-reverse md:flex-row">
 						<div class="md:w-[50%] flex items-center p-[30px] md:p-[50px] lg:p-[40px]">
 							<div class="max-w-[450px] m-auto">
 								<p class="h2 pt-3 pb-2 text-white">
-									{culturePost?.frontmatter.title}
+									{culturePost?.data.title}
 								</p>
 								<div class="flex items-start text-white py-3 italic">
-									 <small class="opacity-[.7]">By {culturePost?.frontmatter?.author} <span class="px-1">&bull;</span> {culturePost?.frontmatter?.date}</small>
+									 <small class="opacity-[.7]">By {culturePost?.data?.author} <span class="px-1">&bull;</span> {culturePost?.data?.date}</small>
 								</div>
-								<p class="text-sm py-2 text-white">{culturePost?.frontmatter?.description}</p>
+								<p class="text-sm py-2 text-white">{culturePost?.data?.description}</p>
 							</div>
 						</div>
 						<div class="flex md:w-[50%]">
 							<img
 								class="h-full md:aspect-[7/5] object-cover overflow-hidden"
-								src={culturePost?.frontmatter?.image.src}
-								alt={culturePost?.frontmatter?.image.alt}
+								src={culturePost?.data?.image.src}
+								alt={culturePost?.data?.image.alt}
 							/>
 						</div>
 					</article>
@@ -221,34 +220,34 @@ const [firstPost, ...posts] = allPosts
 				<div class="flex flex-col md:flex-row lg:flex-col gap-0 md:gap-4 lg:gap-0">
 					<div class="flex-1 flex flex-col border-0 md:border-r lg:border-0 pr-5 lg:pr-0">
 						<a href="/" class="h-[50%] border-b py-3 lg:pt-0">
-							<small class="pb-2 block w-max text-[12px] lg:text-[10px] uppercase bold italic">Metro Beat</small>
+							<small class="pb-2 block w-max text-[12px] lg:text-[10px] uppercase bold italic">{allPosts[1]?.data?.category}</small>
 							<p class="!leading-[1.4] lg:!leading-[1.25] text-gray-800 font-bold">
-								Barnes & Noble Introduces New 1,035 Screen eReader, the Nook Book
+								{allPosts[1]?.data?.title}
 							</p>
-							<small class="pt-2 block w-max text-[12px] lg:text-[10px] uppercase bold italic">By Alistar Graves</small>
+							<small class="pt-2 block w-max text-[12px] lg:text-[10px] capitalize bold italic">By {allPosts[1]?.data?.author}</small>
 						</a>
 						<a href="/" class="h-[50%] border-b md:border-0 lg:border-b py-3">
-							<small class="pb-2 block w-max text-[12px] lg:text-[10px] uppercase bold italic">Arts</small>
+							<small class="pb-2 block w-max text-[12px] lg:text-[10px] uppercase bold italic">{allPosts[2]?.data?.category}</small>
 							<p class="!leading-[1.4] lg:!leading-[1.25] text-gray-800 font-bold">
-								Electric Daisy Carnival Prompts Amber Alert for “Molly”
+								{allPosts[2]?.data?.title}
 							</p>
-							<small class="pt-2 block w-max text-[12px] lg:text-[10px] uppercase bold italic">By Alistar Graves</small>
+							<small class="pt-2 block w-max text-[12px] lg:text-[10px] capitalize bold italic">By {allPosts[2]?.data?.author}</small>
 						</a>
 					</div>
 					<div class="flex-1 flex flex-col">
 						<a href="/" class="h-[50%] py-3 border-b">
-							<small class="pb-2 block w-max text-[12px] lg:text-[10px] uppercase bold italic">NEWS</small>
+							<small class="pb-2 block w-max text-[12px] lg:text-[10px] uppercase bold italic">{allPosts[3]?.data?.category}</small>
 							<p class="!leading-[1.4] lg:!leading-[1.25] text-gray-800 font-bold">
-								The 19th Annual Race for the Cure Might Be Closest Race Yet
+								{allPosts[3]?.data?.title}
 							</p>
-							<small class="pt-2 block w-max text-[12px] lg:text-[10px] uppercase bold italic">By Alistar Graves</small>
+							<small class="pt-2 block w-max text-[12px] lg:text-[10px] capitalize bold italic">By {allPosts[3]?.data?.author}</small>
 						</a>
 						<a href="/" class="h-[50%] py-3 lg:pb-0">
-							<small class="pb-2 block w-max text-[12px] lg:text-[10px] uppercase bold italic">OPINION</small>
+							<small class="pb-2 block w-max text-[12px] lg:text-[10px] uppercase bold italic">{allPosts[4]?.data?.category}</small>
 							<p class="!leading-[1.4] lg:!leading-[1.25] text-gray-800 font-bold">
-								New Research Shows That Marijuana Gets You Pretty High
+								{allPosts[4]?.data?.title}
 							</p>
-							<small class="pt-2 block w-max text-[12px] lg:text-[10px] uppercase bold italic">By Alistar Graves</small>
+							<small class="pt-2 block w-max text-[12px] lg:text-[10px] capitalize bold italic">By {allPosts[4]?.data?.author}</small>
 						</a>
 					</div>
 				</div>
@@ -256,7 +255,7 @@ const [firstPost, ...posts] = allPosts
 		</section>
 
 		<section class="bg-[var(--black)] py-16 px-4 text-center mb-5">
-			<p class="h4 !leading-[1.65] text-white m-auto">Readers like you support the journalists like us. <br/> Please donate today.</p>
+			<p class="h4 !leading-[1.65] text-white m-auto">Readers like you support journalists like us. <br/> Please donate today.</p>
 			<a href="/donate" class="inline-block p block mt-3 bg-white !leading-[1.2] px-6 py-2 rounded-l-full rounded-r-full">
 				Donate
 			</a>
