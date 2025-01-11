@@ -1,6 +1,9 @@
 :root {
   --dark-gray: rgb(68,68,68);
   --black: rgb(10, 12, 16);
+  --cream: #F8F7F3;
+  --btn-hover-opacity: 0.85;
+  --red-dark: #800020;
 }
 
 h1, h2, h3, h4, h5, h6, p, a {
@@ -68,7 +71,7 @@ em {
 }
 
 .post-body a {
-  color: #800020;
+  color: var(--red-dark);
 }
 
 .post-body h1, 
@@ -79,4 +82,8 @@ em {
 .post-body h6 {
   margin-bottom: 16px; /* Adjust as needed */
   margin-top: 16px; /* Adjust as needed */
+}
+
+a:hover .title {
+  text-decoration: underline;
 }
