@@ -1,5 +1,5 @@
 ---
-title: "Airlines Experimenting With Front Door Pick-Up for First-Class Passengers"
+title: "Airlines Experiment With Front Door Pick-Up for First-Class Passengers"
 description: "Imagine your journey starting with an airliner at your doorstep—airlines are testing front door pick-up for first-class passengers."
 author: "Penelope Quill"
 date: "2024-04-21"
