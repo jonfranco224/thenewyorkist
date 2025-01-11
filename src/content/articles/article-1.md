@@ -6,7 +6,7 @@ date: "2024-04-20"
 category: "Local"
 image:
   {
-   src: "https://res.cloudinary.com/ddpw0my3h/image/upload/f_auto/v1736551957/city-flooding_ytehfc.webp",
+   src: "https://res.cloudinary.com/ddpw0my3h/image/upload/f_auto/v1736559459/city-flooding-comp_vjm56q.webp",
    alt: "Photo by some dude we found on craigslist",
   }
 isPublished: true
