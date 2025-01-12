@@ -41,11 +41,15 @@ allPosts.sort((a, b) => {
     image: post?.data?.image
   }}
 >
-  <div class="container mx-auto pt-8 md:pt-10 pb-5 flex flex-col lg:flex-row gap-5">
-    <div class="max-w-[var(--content-width)] m-auto">
-      <p class="small !leading-[1] pb-2.5 italic">{post.data.category}</p>
-      <h1>{post.data.title}</h1>
-      <div class="border-t mt-5 flex flex-col sm:flex-row justify-between md:items-center gap-5 md:gap-0 py-3">
+  <div class="mx-auto pt-8 md:pt-8 pb-5 flex flex-col md:flex-row max-w-[var(--content-width)] md:max-w-full">
+    <div class="md:w-[70%] m-auto">
+      <div class="relative ">
+        <div class="border-b absolute w-[25%] top-[50%] h-[1px] z-[-1]"></div>
+        <p class="small !leading-[1] italic bg-[var(--cream)] w-max ml-4 pl-2.5 pr-2.5">{post.data.category}</p>
+      </div>
+      
+      <h1 class="pt-4 leading-[1.2] pb-8 max-w-[1000px] mx-auto">{post.data.title}</h1>
+      <div class="border-t border-b mb-5 flex flex-col sm:flex-row justify-between md:items-center gap-5 md:gap-0 py-3">
         <div class="flex items-center ">
           <img class="w-[41px] md:w-[41px] h-[41px] md:h-[41px] object-cover rounded-full" src="https://res.cloudinary.com/ddpw0my3h/image/upload/v1736559312/Alistair_Graves_n8rlgz.webp" />
           <div class="pl-3 flex flex-col justify-center">
@@ -92,8 +96,9 @@ allPosts.sort((a, b) => {
             </svg>
           </a> 
         </div>
-      </div>
-      <div class=" pt-5 pb-4 md:pb-5 aspect-video border-t">
+      </div>      
+      
+      <div class="pb-4 md:pb-5 aspect-video">
         <img 
           class="w-full object-cover overflow-hidden aspect-video" 
           src={post.data.image.src}
@@ -113,41 +118,42 @@ allPosts.sort((a, b) => {
         </button>
       </div>
     </div>
-    <div class="border-0 lg:border-l pl-0 lg:pl-5 max-w-[var(--content-width)] mx-auto lg:max-w-full">
-      <p class="!leading-[1] border-b pb-2.5">Related News</p>
-      <section class="grid grid-cols-2 lg:grid-cols-1">
-        {
-          [allPosts[0], allPosts[1], allPosts[2], allPosts[3]].map((post) => (
-            <a
-              href={`/articles/${post.slug}`}
-              class="flex flex-col border-b"
-            >
-              {/* <img
-                class="w-full aspect-video lg:aspect-[7/5] object-cover overflow-hidden"
-                src={post.data.image.src}
-                alt={post.data.image.alt}
-              /> */}
-              <div class="flex flex-col flex-1 py-5">
-                <div class="flex items-start text-extra-small italic mt-auto">
-                  {post.data.category} <span class="inline-block text-[rgb(68,68,68)] px-2">|</span> By {post.data.author} 
+    <div class="w-[30%] flex flex-col pl-5 mx-auto lg:max-w-full border-l ml-5">
+      <div class="flex-1 border-b hidden md:block ">
+        <p class=" !leading-[1] mb-2">Related News</p>
+        <section class="grid grid-cols-2 md:grid-cols-1 border-t">
+          {
+            [allPosts[0], allPosts[1], allPosts[2], allPosts[3]].map((post) => (
+              <a
+                href={`/articles/${post.slug}`}
+                class="flex border-b py-3"
+              >
+                {/* <img
+                  class="w-[25%] aspect-video lg:aspect-[7/5] object-cover overflow-hidden"
+                  src={post.data.image.src}
+                  alt={post.data.image.alt}
+                /> */}
+                <div class="w-[100%] flex flex-col justify-start pl-0">
+                  <div class="flex items-start text-extra-small italic pb-2">
+                    {post.data.category} <span class="inline-block text-[rgb(68,68,68)] px-2">|</span> By {post.data.author} 
+                  </div>
+                  <p class="title text-[16px] font-bold !leading-[1.3]">
+                    {post.data.title}
+                  </p>
+                  <p class="text-[12px] leading-[1.4] text-[rgb(68,68,68)] pt-2">{post.data.description}</p>
+                  
                 </div>
-                <p class="title text-[16px] font-bold !leading-[1.3] py-2">
-                  {post.data.title}
-                </p>
-                <p class="text-[12px] leading-[1.4] text-[rgb(68,68,68)]">{post.data.description}</p>
-                
-              </div>
-            </a>
-          ))
-        }
-      </section>
+              </a>
+            ))
+          }
+        </section>
+      </div>
     </div>
-    
   </div>
-  <div class="container">
-    <div class="mx-auto border-t max-w-[var(--content-width)] lg:max-w-none">
+  <div>
+    <div class="max-w-[var(--content-width)] mx-auto border-t md:max-w-none">
       <CardRowTall title="More News" posts={allPosts} />
-      <section class="bg-[var(--black)] py-16 px-4 text-center mb-5 mt-5">
+      <section class="bg-[var(--black)] py-10 px-4 text-center mb-5 mt-5">
         <p class="h4 !leading-[1.65] text-white m-auto">Readers like you support journalists like us. <br/> Please donate today.</p>
         <a href="/donate" class="hover:text-white border border-white bg-white hover:bg-transparent inline-block p block mt-3  !leading-[1.2] px-6 py-2 rounded-l-full rounded-r-full">
           Donate
