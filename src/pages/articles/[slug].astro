@@ -41,15 +41,15 @@ allPosts.sort((a, b) => {
     image: post?.data?.image
   }}
 >
-  <div class="mx-auto pt-8 md:pt-8 pb-5 flex flex-col md:flex-row">
+  <div class="mx-auto pt-5 md:pt-8 pb-5 flex flex-col md:flex-row">
     <div class="min-w-none md:min-w-[550px] md:w-[70%] m-auto">
       <div class="relative ">
-        <div class="border-b absolute w-[25%] top-[50%] h-[1px] z-[-1]"></div>
+        <div class="border-b absolute w-[40%] sm:w-[25%] top-[50%] h-[1px] z-[-1]"></div>
         <p class="small !leading-[1] italic bg-[var(--cream)] w-max ml-4 pl-2.5 pr-2.5">{post.data.category}</p>
       </div>
       
-      <h1 class="pt-4 leading-[1.2] pb-8 max-w-[1000px] mx-auto">{post.data.title}</h1>
-      <div class="border-t border-b mb-5 flex flex-col sm:flex-row justify-between md:items-center gap-5 md:gap-0 py-3">
+      <h1 class="pt-3 sm:pt-4 leading-[1.2] pb-5 sm:pb-8 max-w-[1000px] mx-auto">{post.data.title}</h1>
+      <div class="border-t border-b mb-5 flex flex-row justify-between md:items-center gap-5 md:gap-0 py-3">
         <div class="flex items-center ">
           <img class="w-[41px] md:w-[41px] h-[41px] md:h-[41px] object-cover rounded-full" src="https://res.cloudinary.com/ddpw0my3h/image/upload/v1736559312/Alistair_Graves_n8rlgz.webp" />
           <div class="pl-3 flex flex-col justify-center">
