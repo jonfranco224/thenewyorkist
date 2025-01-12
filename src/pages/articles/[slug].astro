@@ -41,8 +41,8 @@ allPosts.sort((a, b) => {
     image: post?.data?.image
   }}
 >
-  <div class="mx-auto pt-8 md:pt-8 pb-5 flex flex-col md:flex-row max-w-[var(--content-width)] md:max-w-full">
-    <div class="md:w-[70%] m-auto">
+  <div class="mx-auto pt-8 md:pt-8 pb-5 flex flex-col md:flex-row">
+    <div class="min-w-none md:min-w-[550px] md:w-[70%] m-auto">
       <div class="relative ">
         <div class="border-b absolute w-[25%] top-[50%] h-[1px] z-[-1]"></div>
         <p class="small !leading-[1] italic bg-[var(--cream)] w-max ml-4 pl-2.5 pr-2.5">{post.data.category}</p>
@@ -151,7 +151,7 @@ allPosts.sort((a, b) => {
     </div>
   </div>
   <div>
-    <div class="max-w-[var(--content-width)] mx-auto border-t md:max-w-none">
+    <div class="mx-auto border-t md:max-w-none">
       <CardRowTall title="More News" posts={allPosts} />
       <section class="bg-[var(--black)] py-10 px-4 text-center mb-5 mt-5">
         <p class="h4 !leading-[1.65] text-white m-auto">Readers like you support journalists like us. <br/> Please donate today.</p>
