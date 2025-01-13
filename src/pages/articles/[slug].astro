@@ -78,7 +78,7 @@ allPosts.sort((a, b) => {
       <div class="border-b flex flex-row justify-between md:items-center gap-5 md:gap-0 py-3">
         <div class="flex items-center ">
           <div class="flex flex-col justify-center">
-            <p>By {post.data.author}</p>
+            <p class="text-[16px]">By {post.data.author}</p>
           </div>
         </div>
         <div class="flex items-center gap-2">
@@ -105,9 +105,7 @@ allPosts.sort((a, b) => {
                 href={`/articles/${post.slug}`}
                 class="flex border-b py-3"
               >
-                
                 <div class="w-[100%] flex flex-col justify-start pl-0">
-                  
                   <div class="flex">
                     <img
                       class="hidden xl:block w-[25%] aspect-video xl:aspect-[7/5] object-cover overflow-hidden"
@@ -134,7 +132,7 @@ allPosts.sort((a, b) => {
   </div>
   <div>
     <div class="mx-auto md:max-w-none">
-      <CardRowTall borderT title="More News" posts={allPosts} />
+      <CardRowTall borderT title="Related News" posts={allPosts} />
       <section class="bg-[var(--black)] py-10 px-4 text-center mb-5 mt-5">
         <p class="h4 !leading-[1.65] text-white m-auto">Readers like you support journalists like us. <br/> Please donate today.</p>
         <a href="/donate" class="hover:text-white border border-white bg-white hover:bg-transparent inline-block p block mt-3  !leading-[1.2] px-6 py-2 rounded-l-full rounded-r-full">
