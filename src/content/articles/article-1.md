@@ -2,7 +2,7 @@
 title: "Sanitation Unveils AI-Powered Plungers to Address Flooding"
 description: "After budget increases, the sanitation department is using advanced tech, like AI plungers, to tackle flooding."
 author: "Alistair Graves"
-date: "2024-04-20"
+date: "2024-04-25"
 category: "Local"
 image:
   {

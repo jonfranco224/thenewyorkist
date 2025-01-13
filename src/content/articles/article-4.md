@@ -2,7 +2,7 @@
 title: "Delivery Apps Testing Missile-Powered Delivery for Faster Arrival"
 description: "Innovative tech aims to revolutionize food delivery speed with cutting-edge propulsion systems."
 author: "Alistair Graves"
-date: "2024-04-23"
+date: "2024-04-22"
 category: "Local"
 image:
   {

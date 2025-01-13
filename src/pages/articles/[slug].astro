@@ -1,16 +1,17 @@
 ---
 import Layout from '../../components/Layout.astro'
-// import Article from '../../components/Article.astro';
 import { render } from 'astro:content'
-import { getCollection } from 'astro:content';
 import { formatReadableDate } from '../../lib/date'
 import { estimateReadingTime } from '../../lib/reading-time'
 import CardRowTall from '../../components/CardRowTall.astro';
 import Social from '../../components/articles/Social.astro'
+import { getContent } from '../../lib/get-content';
+import Sidebar from '../../components/articles/Sidebar.astro';
 
 // Generate all possible routes for blog posts
 export async function getStaticPaths() {
-  const posts = await getCollection('articles'); // Adjust collection name if needed
+  const posts = await getContent('articles')
+
   return posts.map((post) => {
     return {
       params: { slug: post.slug },
@@ -24,16 +25,13 @@ const { post } = Astro.props;
 const { Content } = await render(post);
 const encoded_url = `https://www.thenewyorkist.com/articles/${encodeURIComponent(post.slug)}`;
 
+// Get Posts
+const latestPosts = await getContent('articles', { limit: 4 })
+const relatedPosts = (await getContent('articles', {
+  limit: 6,
+  filter: { category: post.data.category }
+})).filter((target) => target.slug !== post.slug);
 
-// Get Related Posts
-const allPosts = await getCollection("articles");
-
-// Sort posts by date in descending order (newest first)
-allPosts.sort((a, b) => {
-  const dateA = new Date(a.data.date).getTime(); // Convert to timestamp
-  const dateB = new Date(b.data.date).getTime(); // Convert to timestamp
-  return dateA - dateB;
-});
 ---
 
 <Layout
@@ -46,11 +44,10 @@ allPosts.sort((a, b) => {
 >
   <div class="mx-auto pt-5 md:pt-8 pb-5 flex flex-col md:flex-row">
     <div class="min-w-none md:min-w-[550px] md:w-[70%] m-auto">
-      <div class="relative ">
+      <div class="relative">
         <div class="border-b absolute w-[40%] sm:w-[25%] top-[50%] h-[1px] z-[-1]"></div>
         <p class="small !leading-[1] italic bg-[var(--cream)] w-max ml-4 pl-2.5 pr-2.5">{post.data.category}</p>
       </div>
-      
       <h1 class="pt-3 sm:pt-4 leading-[1.2] pb-5 sm:pb-8 max-w-[1000px] mx-auto">{post.data.title}</h1>
       <div class="border-t border-b mb-5 flex flex-row justify-between md:items-center gap-5 md:gap-0 py-3">
         <div class="flex items-center ">
@@ -74,12 +71,12 @@ allPosts.sort((a, b) => {
       <div class="post-body border-b pb-5">
         <Content />
       </div>
-
       <div class="border-b flex flex-row justify-between md:items-center gap-5 md:gap-0 py-3">
         <div class="flex items-center ">
           <div class="flex flex-col justify-center">
-            <p class="text-[16px]">By {post.data.author}</p>
+            <img class="w-[35px] md:w-[35px] h-[35px] md:h-[35px] object-cover rounded-full" src="https://res.cloudinary.com/ddpw0my3h/image/upload/v1736559312/Alistair_Graves_n8rlgz.webp" />
           </div>
+          <p class="text-[16px] pl-3">By {post.data.author}</p>
         </div>
         <div class="flex items-center gap-2">
           <Social url={encoded_url} title={post.data.title} />
@@ -95,44 +92,11 @@ allPosts.sort((a, b) => {
         </button>
       </div> -->
     </div>
-    <div class="w-[30%] flex flex-col pl-5 mx-auto lg:max-w-full border-l ml-5">
-      <div class="flex-1 border-b hidden md:block ">
-        <p class=" !leading-[1] mb-2">Latest News</p>
-        <section class="grid grid-cols-2 md:grid-cols-1 border-t">
-          {
-            [allPosts[0], allPosts[1], allPosts[2], allPosts[3], allPosts[4]].map((post) => (
-              <a
-                href={`/articles/${post.slug}`}
-                class="flex border-b py-3"
-              >
-                <div class="w-[100%] flex flex-col justify-start pl-0">
-                  <div class="flex">
-                    <img
-                      class="hidden xl:block w-[25%] aspect-video xl:aspect-[7/5] object-cover overflow-hidden"
-                      src={post.data.image.src}
-                      alt={post.data.image.alt}
-                    />
-                    <p class="pl-0 xl:pl-3 w-full xl:w-[75%] title text-[16px] font-bold !leading-[1.3]">
-                    {post.data.title}
-                    </p>
-                  </div>
-                  
-                  <p class="text-[12px] leading-[1.4] text-[rgb(68,68,68)] pt-2">{post.data.description}</p>
-                  <div class="flex items-start text-extra-small italic pt-3">
-                    By {post.data.author} 
-                  </div>
-                  
-                </div>
-              </a>
-            ))
-          }
-        </section>
-      </div>
-    </div>
+    <Sidebar title='Related News' posts={relatedPosts} />
   </div>
   <div>
     <div class="mx-auto md:max-w-none">
-      <CardRowTall borderT title="Related News" posts={allPosts} />
+      <CardRowTall borderT title="Latest News" posts={latestPosts} />
       <section class="bg-[var(--black)] py-10 px-4 text-center mb-5 mt-5">
         <p class="h4 !leading-[1.65] text-white m-auto">Readers like you support journalists like us. <br/> Please donate today.</p>
         <a href="/donate" class="hover:text-white border border-white bg-white hover:bg-transparent inline-block p block mt-3  !leading-[1.2] px-6 py-2 rounded-l-full rounded-r-full">
