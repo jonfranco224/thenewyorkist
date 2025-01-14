@@ -1,7 +1,10 @@
 ---
 title: "Park Squirrel Strike Hits Day 20 Amid Ongoing Talks"
 description: "Union and park officials remain locked in discussions as the squirrel strike disrupts opportunities for visitors to capture how cute they are."
-author: "Alistair Graves"
+author: {
+  id: 'alistair-graves',
+  name: 'Alistair Graves'
+}
 date: "2024-04-23"
 category: "Metro Beat"
 image:

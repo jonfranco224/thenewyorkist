@@ -1,12 +1,15 @@
 ---
 title: "Delivery Apps Testing Missile-Powered Delivery for Faster Arrival"
 description: "Innovative tech aims to revolutionize food delivery speed with cutting-edge propulsion systems."
-author: "Alistair Graves"
+author: {
+  id: 'penelope-quill',
+  name: 'Penelope Quill'
+}
 date: "2024-04-22"
 category: "Local"
 image:
   {
-    src: "https://res.cloudinary.com/ddpw0my3h/image/upload/f_auto/v1736553693/missle_mkg4gh.webp",
+    src: "https://res.cloudinary.com/ddpw0my3h/image/upload/f_auto/v1736553693/missle_mkg4gh_1_l89hwf.webp",
     alt: "",
   }
 isPublished: true
