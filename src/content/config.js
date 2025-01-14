@@ -1,5 +1,4 @@
 import { defineCollection, z } from "astro:content";
-import { glob } from "astro/loaders";
 
 export const collections = {
   articles: defineCollection({
@@ -10,7 +9,10 @@ export const collections = {
       // The article description
       description: z.string().min(1),
       // Author name
-      author: z.string().min(1),
+      author: z.object({
+        id: z.string(),
+        name: z.string(),
+      }),
       // Formatted date and time
       date: z.string().regex(
         /^\d{4}-\d{2}-\d{2}$/, // Regular expression for "YYYY-MM-DD"
@@ -35,6 +37,14 @@ export const collections = {
       }),
       // Whether the article is published or still in draft
       isPublished: z.boolean(),
+    }),
+  }),
+  authors: defineCollection({
+    type: 'content',
+    schema: z.object({
+      id: z.string().min(1),
+      name: z.string().min(1),
+      image: z.string(),
     }),
   }),
 };

@@ -21,7 +21,7 @@ const { posts, title, borderB, borderT } = Astro.props
             </p>
             <p class="small leading-[1.4] text-[rgb(68,68,68)] pb-4">{post.data.description}</p>
             <div class="flex items-start text-extra-small italic mt-auto">
-              {post.data.category} <span class="inline-block text-[rgb(68,68,68)] px-2">|</span> By {post.data.author} 
+              {post.data.category} <span class="inline-block text-[rgb(68,68,68)] px-2">|</span> By {post.data.author?.name} 
             </div>
           </div>
         </a>

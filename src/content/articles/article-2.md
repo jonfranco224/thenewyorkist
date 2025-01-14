@@ -1,12 +1,15 @@
 ---
 title: "Airlines Experiment With Front Door Pick-Up for First-Class Passengers"
 description: "Imagine your journey starting with an airliner at your doorstep—airlines are testing front door pick-up for first-class passengers."
-author: "Penelope Quill"
+author: {
+  id: 'penelope-quill',
+  name: 'Penelope Quill'
+}
 date: "2024-04-24"
 category: "Technology"
 image:
   {
-    src: "https://res.cloudinary.com/ddpw0my3h/image/upload/f_auto/v1736552497/plane-in-house_rgkvre.webp",
+    src: "https://res.cloudinary.com/ddpw0my3h/image/upload/f_auto/v1736552497/plane-in-house_rgkvre_1_mxjzgt.webp",
     alt: "",
   }
 isPublished: true
