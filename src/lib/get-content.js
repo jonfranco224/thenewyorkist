@@ -1,6 +1,6 @@
 import { getCollection } from 'astro:content';
 
-export const getContent = async (type, { slugs = [], limit = 5, offset = 0, filter = {}, sort = 'latest' } = {}) => {
+export const getContent = async (type, { slugs = [], limit, offset = 0, filter = {}, sort = 'latest' } = {}) => {
   const posts = await getCollection(type);
 
   // Filter posts based on slugs
@@ -24,8 +24,10 @@ export const getContent = async (type, { slugs = [], limit = 5, offset = 0, filt
         return sort === 'latest' ? dateB - dateA : dateA - dateB;
       });
 
-  // Limit the posts based on offset and limit
-  const limited = sortedPosts.slice(offset, offset + limit);
+  // Apply offset and limit if limit is defined
+  const limited = typeof limit === 'number' 
+    ? sortedPosts.slice(offset, offset + limit)
+    : sortedPosts.slice(offset);
 
   return limited; // Return the result
 };
