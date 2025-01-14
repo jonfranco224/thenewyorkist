@@ -7,7 +7,11 @@ import { getContent } from "../lib/get-content";
 const allPosts = await getContent('articles')
 const featuredPosts = await getContent('articles', { limit: 5 })
 const spotlightPosts = await getContent('articles', { limit: 4 })
-const [culturePost] = await getContent('articles', { slugs: ['article-5'] });
+const [culturePost] = await getContent('articles', {
+	slugs: [
+		'immersive-play-court-room-has-theatre-world-buzzing'
+	]
+});
 ---
 
 <Layout
