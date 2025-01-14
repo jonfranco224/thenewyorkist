@@ -5,8 +5,23 @@ import Layout from "../components/Layout.astro";
 import { getContent } from "../lib/get-content";
 
 const allPosts = await getContent('articles')
-const featuredPosts = await getContent('articles', { limit: 5 })
-const spotlightPosts = await getContent('articles', { limit: 4 })
+const featuredPosts = await getContent('articles', {
+	slugs: [
+		'luxury-condo-residents-enraged-over-poor-construction-and-uncovered-pipes',
+		'airlines-experiment-with-front-door-pick-up-for-first-class-passengers',
+		'city-to-pilot-composting-your-failed-new-years-resolutions',
+		'park-squirrel-strike-hits-day-20-amid-ongoing-talks',
+		'sanitation-unveils-ai-powered-plungers-to-address-flooding'
+	]
+})
+const spotlightPosts = await getContent('articles', {
+	slugs: [
+		'immersive-play-court-room-has-theatre-world-buzzing',
+		'delivery-apps-testing-missile-powered-delivery-for-faster-arrival',
+		'park-squirrel-strike-hits-day-20-amid-ongoing-talks',
+		'sanitation-unveils-ai-powered-plungers-to-address-flooding'
+	]
+})
 const [culturePost] = await getContent('articles', {
 	slugs: [
 		'immersive-play-court-room-has-theatre-world-buzzing'
