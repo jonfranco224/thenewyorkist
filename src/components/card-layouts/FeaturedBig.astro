@@ -1,0 +1,63 @@
+---
+const { posts } = Astro.props
+---
+
+<section class="border-b pt-5 pb-0 md:pb-5 flex flex-col lg:flex-row">
+  <a
+    href={`/articles/${posts[0]?.slug}`}
+    class="flex w-full lg:w-[81%] lg:pr-6"
+  >
+    <article class="flex flex-col md:flex-row gap-5">
+      <img
+        class="flex-1 md:aspect-[7/5] object-cover overflow-hidden"
+        src={posts[0]?.data.image.src}
+        alt={posts[0]?.data.image.alt}
+      />
+      <div class="md:flex-1 lg:py-[1px]">
+        <div class="w-full max-w-full lg:max-w-[500px]">
+          <small class="hidden md:block w-max text-extra-small uppercase bold italic">{posts[0]?.data?.category}</small>
+          <p class="title h3 pt-0 md:pt-2 pb-2 font-bold">
+            {posts[0]?.data.title}
+          </p>
+          <p class="small pb-2 text-[var(--dark-gray)]">{posts[0]?.data.description}</p>
+          <div class="flex items-start pt-2 text-extra-small italic">
+            By {posts[0]?.data?.author}
+           </div>
+        </div>
+      </div>
+    </article>
+  </a>
+  <div class="border-t md:border-t-0 border-l-0 lg:border-l px-0 lg:pl-6 w-full lg:w-[25%] mt-5 lg:mt-0 lg:my-0">
+    <!-- <p class="small font-bold pb-2">Spotlight</p> -->
+    <div class="flex flex-col md:flex-row lg:flex-col gap-0 md:gap-4 lg:gap-0">
+      <div class="flex-1 flex flex-col border-0 md:border-r lg:border-0 pr-5 lg:pr-0">
+        <a href={`/articles/${posts[1].slug}`} class="h-[50%] border-b py-3 lg:pt-0">
+          <small class="pb-1 block w-max text-[12px] lg:text-[10px] uppercase bold italic">{posts[1]?.data?.category}</small>
+          <p class="title text-[14px] lg:text-[13px] !leading-[1.4] lg:!leading-[1.25] font-bold">
+            {posts[1]?.data?.title}
+          </p>
+        </a>
+        <a href={`/articles/${posts[2].slug}`} class="h-[50%] border-b md:border-0 lg:border-b py-3">
+          <small class="pb-1 block w-max text-[12px] lg:text-[10px] uppercase bold italic">{posts[2]?.data?.category}</small>
+          <p class="title text-[14px] lg:text-[13px] !leading-[1.4] lg:!leading-[1.25] font-bold">
+            {posts[2]?.data?.title}
+          </p>
+        </a>
+      </div>
+      <div class="flex-1 flex flex-col">
+        <a href={`/articles/${posts[3].slug}`} class="h-[50%] py-3 border-b">
+          <small class="pb-1 block w-max text-[12px] lg:text-[10px] uppercase bold italic">{posts[3]?.data?.category}</small>
+          <p class="title text-[14px] lg:text-[13px] !leading-[1.4] lg:!leading-[1.25] font-bold">
+            {posts[3]?.data?.title}
+          </p>
+        </a>
+        <a href={`/articles/${posts[4].slug}`} class="h-[50%] py-3 lg:pb-0">
+          <small class="pb-1 block w-max text-[12px] lg:text-[10px] uppercase bold italic">{posts[4]?.data?.category}</small>
+          <p class="title text-[14px] lg:text-[13px] !leading-[1.4] lg:!leading-[1.25] font-bold">
+            {posts[4]?.data?.title}
+          </p>
+        </a>
+      </div>	
+    </div>
+  </div>
+</section>
