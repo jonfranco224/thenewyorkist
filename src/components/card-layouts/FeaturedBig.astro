@@ -9,6 +9,7 @@ const { posts } = Astro.props
   >
     <article class="flex flex-col md:flex-row gap-5">
       <img
+        loading="lazy"
         class="flex-1 md:aspect-[7/5] object-cover overflow-hidden"
         src={posts[0]?.data.image.src}
         alt={posts[0]?.data.image.alt}

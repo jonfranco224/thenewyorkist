@@ -61,6 +61,7 @@ const [culturePost] = await getContent('articles', {
 						</div>
 						<div class="flex md:w-[50%]">
 							<img
+								loading="lazy"
 								class="h-full md:aspect-[7/5] object-cover overflow-hidden"
 								src={culturePost?.data?.image.src}
 								alt={culturePost?.data?.image.alt}
@@ -122,6 +123,7 @@ const [culturePost] = await getContent('articles', {
 			>
 				<article class="flex flex-col gap-5">
 					<img
+						loading="lazy"
 						class="flex-1 md:aspect-video object-cover overflow-hidden"
 						src={allPosts[0]?.data.image.src}
 						alt={allPosts[0]?.data.image.alt}

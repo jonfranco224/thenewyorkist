@@ -14,6 +14,7 @@ const { title, posts } = Astro.props
             <div class="w-[100%] flex flex-col justify-start pl-0">
               <div class="flex">
                 <img
+                  loading="lazy"
                   class="hidden xl:block w-[25%] aspect-video xl:aspect-[7/5] object-cover overflow-hidden"
                   src={post.data.image.src}
                   alt={post.data.image.alt}
