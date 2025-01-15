@@ -9,7 +9,7 @@ date: "2024-04-23"
 category: "Metro Beat"
 image:
   {
-    src: "https://res.cloudinary.com/ddpw0my3h/image/upload/f_auto/v1736554387/squirrel_copy_mcyrie.png",
+    src: "https://res.cloudinary.com/ddpw0my3h/image/upload/f_auto/v1736965958/squirrels-striking_fubzmp.webp",
     alt: "",
   }
 isPublished: true

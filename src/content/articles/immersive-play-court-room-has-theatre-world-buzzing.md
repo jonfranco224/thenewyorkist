@@ -9,7 +9,7 @@ date: "2024-04-21"
 category: "Art"
 image:
   {
-    src: "https://res.cloudinary.com/ddpw0my3h/image/upload/f_auto/v1736551232/court-room-2_gdtsah_1_yddtq1.webp",
+    src: "https://res.cloudinary.com/ddpw0my3h/image/upload/v1736966414/court-room_smqudw.webp",
     alt: "",
   }
 isPublished: true

@@ -9,7 +9,7 @@ date: "2024-04-24"
 category: "Technology"
 image:
   {
-    src: "https://res.cloudinary.com/ddpw0my3h/image/upload/f_auto/v1736881625/apt-photo-2_wjgbia.webp",
+    src: "https://res.cloudinary.com/ddpw0my3h/image/upload/f_auto/v1736963396/treadmill-stack_btvk6o.webp",
     alt: "",
   }
 isPublished: true

@@ -9,7 +9,7 @@ date: "2024-04-22"
 category: "Local"
 image:
   {
-    src: "https://res.cloudinary.com/ddpw0my3h/image/upload/f_auto/v1736553693/missle_mkg4gh_1_l89hwf.webp",
+    src: "https://res.cloudinary.com/ddpw0my3h/image/upload/v1736965075/missile-2_jac7fq.webp",
     alt: "",
   }
 isPublished: true
