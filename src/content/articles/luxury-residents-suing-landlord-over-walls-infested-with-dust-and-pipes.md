@@ -1,5 +1,5 @@
 ---
-title: "Luxury Residents Suing Landlord Over Dust and Pipe-Infested Walls"
+title: "Luxury Residents Suing Over Walls Infested with Dust And Pipes"
 description: "Luxury condo residents on the Upper East Side are suing their landlord after discovering exposed wiring, pipes, and dust-filled walls, sparking frustration and calls for a class action lawsuit."
 author: {
   id: 'henry-driver',
@@ -9,7 +9,7 @@ date: "2025-01-14"
 category: "Metro Beat"
 image:
   {
-    src: "https://res.cloudinary.com/ddpw0my3h/image/upload/v1736881625/apt-photo-2_wjgbia.webp",
+    src: "https://res.cloudinary.com/ddpw0my3h/image/upload/v1736963871/apartment-pipes_kmwacx.webp",
     alt: "",
   }
 isPublished: true
