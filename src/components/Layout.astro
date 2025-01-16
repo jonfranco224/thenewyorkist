@@ -23,7 +23,6 @@ const isProd = import.meta.env.PROD;
       name='google-adsense-account'
       content='ca-pub-2655846022144054'
     />
-    <title>The New Yorkist</title>
 
     <!-- Preloads for Libre Baskerville fonts -->
     <link rel="preload" href="https://fonts.gstatic.com/s/librebaskerville/v14/kmKhZrc3Hgbbcjq75U4uslyuy4kn0qNcWx8QDO-WyrubOA.woff2" as="font" type="font/woff2" crossorigin="anonymous">
@@ -54,7 +53,17 @@ const isProd = import.meta.env.PROD;
           }
         }}
       />
-    ) : null}
+    ) : <SEO
+        title="The New Yorkist"
+        description="Your Most Trusted News Source Since 1624 – Delivering reliable, timely, and accurate news for over 50 years. Stay informed with updates you can count on!"
+        openGraph={{
+          basic: {
+            title: "The New Yorkist",
+            type: "website",
+            image: 'https://res.cloudinary.com/ddpw0my3h/image/upload/f_auto/v1736825181/logo_m2gtvk.webp'
+          }
+        }}
+      />}
     
 
     <meta

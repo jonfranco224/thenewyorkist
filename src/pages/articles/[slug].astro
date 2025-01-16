@@ -38,7 +38,7 @@ const relatedPosts = await getContent('articles', { limit: 6 })
 
 <Layout
   seo={{ 
-    title: post?.data?.title,
+    title: post?.data?.title + ' - The New Yorkist',
     description: post?.data?.description,
     type: 'article',
     image: post?.data?.image
