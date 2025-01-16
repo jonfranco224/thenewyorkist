@@ -7,6 +7,7 @@ import NotificationsPopup from './popups/Notifications.svelte'
 import { SEO } from "astro-seo";
 
 const seo = Astro.props?.seo;
+const isProd = import.meta.env.PROD;
 
 ---
 
@@ -61,19 +62,23 @@ const seo = Astro.props?.seo;
       content='width=device-width, initial-scale=1.0'
     />
 
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src='https://www.googletagmanager.com/gtag/js?id=G-3KFGYR32R1'
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || []
-      function gtag() {
-        dataLayer.push(arguments)
-      }
-      gtag('js', new Date())
-      gtag('config', 'G-3KFGYR32R1')
-    </script>
+    {isProd ? (
+      <>
+        <!-- Google tag (gtag.js) -->
+        <script
+          async
+          src='https://www.googletagmanager.com/gtag/js?id=G-3KFGYR32R1'
+        ></script>
+        <script>
+          window.dataLayer = window.dataLayer || []
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date())
+          gtag('config', 'G-3KFGYR32R1')
+        </script>
+      </>
+    ) : null}
 
     <script
       id='usercentrics-cmp'
