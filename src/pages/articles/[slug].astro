@@ -28,10 +28,11 @@ const encoded_url = `https://www.thenewyorkist.com/articles/${encodeURIComponent
 // Get Posts
 const [author] = await getContent('authors', { filter: { id: post.data.author.id } })
 const latestPosts = await getContent('articles', { limit: 4 })
-const relatedPosts = (await getContent('articles', {
-  limit: 6,
-  filter: { category: post.data.category }
-})).filter((target) => target.slug !== post.slug);
+const relatedPosts = await getContent('articles', { limit: 6 })
+// const relatedPosts = (await getContent('articles', {
+//   limit: 6,
+//   filter: { category: post.data.category }
+// })).filter((target) => target.slug !== post.slug);
 
 ---
 
