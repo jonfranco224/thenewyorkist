@@ -62,23 +62,19 @@ const isProd = import.meta.env.PROD;
       content='width=device-width, initial-scale=1.0'
     />
 
-    {isProd ? (
-      <>
-        <!-- Google tag (gtag.js) -->
-        <script
-          async
-          src='https://www.googletagmanager.com/gtag/js?id=G-3KFGYR32R1'
-        ></script>
-        <script>
-          window.dataLayer = window.dataLayer || []
-          function gtag() {
-            dataLayer.push(arguments);
-          }
-          gtag('js', new Date())
-          gtag('config', 'G-3KFGYR32R1')
-        </script>
-      </>
-    ) : null}
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src='https://www.googletagmanager.com/gtag/js?id=G-3KFGYR32R1'
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date())
+      gtag('config', 'G-3KFGYR32R1')
+    </script>
 
     <script
       id='usercentrics-cmp'
