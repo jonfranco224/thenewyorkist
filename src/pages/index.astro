@@ -7,11 +7,11 @@ import { getContent } from "../lib/get-content";
 const allPosts = await getContent('articles')
 const featuredPosts = await getContent('articles', {
 	slugs: [
+		'tiktok-and-the-us-trouble-in-paradise-for-techs-hottest-power-couple',
 		'luxury-residents-suing-landlord-over-walls-infested-with-dust-and-pipes',
 		'airlines-experiment-with-front-door-pick-up-for-first-class-passengers',
 		'city-to-pilot-composting-your-failed-new-years-resolutions',
-		'car-only-street-party-set-to-roll-out-this-summer',
-		'sanitation-unveils-ai-powered-plungers-to-address-flooding'
+		'car-only-street-party-set-to-roll-out-this-summer'
 	]
 })
 const spotlightPosts = await getContent('articles', {
@@ -72,8 +72,27 @@ const [culturePost] = await getContent('articles', {
 			</section>
 		</div>
 		
-		<p class="!leading-[1] mt-5">The Intern Desk</p>
-		<section class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-3 pt-5  lg:[&>*]:px-4 [&>:first-child]:pl-0 [&>:last-child]:pr-0 [&>:last-child]:border-0 gap-5 lg:gap-0">
+		<!-- <p class="!leading-[1] mt-5">The Intern Desk</p> -->
+		<!-- <section class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-3 pt-5  lg:[&>*]:px-4 [&>:first-child]:pl-0 [&>:last-child]:pr-0 [&>:last-child]:border-0 gap-5 lg:gap-0">
+			{
+				[allPosts[0], allPosts[1], allPosts[2]].map((post) => (
+					<a
+						href={`/articles/${post.slug}`}
+						class="flex flex-col lg:border-r"
+					>
+						<div class="flex flex-col flex-1">
+							<div class="flex items-start text-extra-small italic">
+								{post.data.category} <span class="inline-block text-[rgb(68,68,68)] px-2">|</span> By {post.data.author?.name} 
+							</div>
+							<p class="title text-[18px] font-bold !leading-[1.3] pt-3.5 pb-3">
+                {post.data.title}
+              </p>
+						</div>
+					</a>
+				))
+			}
+		</section> -->
+		<!-- <section class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-3 py-5 md:pb-5 border-b lg:[&>*]:px-4 [&>:first-child]:pl-0 [&>:last-child]:pr-0 [&>:last-child]:border-0 gap-5 lg:gap-0">
 			{
 				[allPosts[0], allPosts[1], allPosts[2]].map((post) => (
 					<a
@@ -92,31 +111,11 @@ const [culturePost] = await getContent('articles', {
 				))
 			}
 		</section>
+		 -->
+		<!-- <CardRowTall borderB title="In The Know" posts={spotlightPosts} /> -->
 
-		<section class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-3 py-5 md:pb-5 border-b lg:[&>*]:px-4 [&>:first-child]:pl-0 [&>:last-child]:pr-0 [&>:last-child]:border-0 gap-5 lg:gap-0">
-			{
-				[allPosts[0], allPosts[1], allPosts[2]].map((post) => (
-					<a
-						href={`/articles/${post.slug}`}
-						class="flex flex-col lg:border-r"
-					>
-						<div class="flex flex-col flex-1">
-							<div class="flex items-start text-extra-small italic">
-								{post.data.category} <span class="inline-block text-[rgb(68,68,68)] px-2">|</span> By {post.data.author?.name} 
-							</div>
-							<p class="title text-[18px] font-bold !leading-[1.3] pt-3.5 pb-3">
-                {post.data.title}
-              </p>
-						</div>
-					</a>
-				))
-			}
-		</section>
-		
-		<CardRowTall borderB title="In The Know" posts={spotlightPosts} />
-
-		<p class="!leading-[1] mt-5">The Metro Beat</p>
-		<section class="border-b py-5 md:py-5 pb-0 md:pb-5 mb-5 flex flex-col lg:flex-row">
+		<!-- <p class="!leading-[1] mt-5">The Metro Beat</p> -->
+		<!-- <section class="border-b py-5 md:py-5 pb-0 md:pb-5 mb-5 flex flex-col lg:flex-row">
 			<a
 				href={`/articles/${allPosts[0]?.slug}`}
 				class="flex w-full lg:w-[50%] lg:pr-6"
@@ -141,7 +140,6 @@ const [culturePost] = await getContent('articles', {
 				</article>
 			</a>
 			<div class="border-t md:border-t-0 border-l-0 lg:border-l px-0 lg:pl-6 w-full lg:w-[50%] mt-5 lg:mt-0 lg:my-0">
-				<!-- <p class="small font-bold pb-2">Spotlight</p> -->
 				<div class="flex flex-col md:flex-row lg:flex-col gap-0 md:gap-4 lg:gap-0">
 					<div class="flex-1 flex flex-col border-0 md:border-r lg:border-0 pr-5 lg:pr-0">
 						<a href="/" class="h-[50%] border-b py-3 lg:pt-0">
@@ -177,7 +175,7 @@ const [culturePost] = await getContent('articles', {
 					</div>
 				</div>
 			</div>
-		</section>
+		</section> -->
 
 		<section class="bg-[var(--black)] py-16 px-4 text-center mb-5">
 			<p class="h4 !leading-[1.65] text-white m-auto">Readers like you support journalists like us. <br/> Please donate today.</p>
